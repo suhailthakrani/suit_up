@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:suit_up/controllers/asset_manager.dart';
+import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/widgets/custom_button.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 import 'package:suit_up/widgets/custom_textfeild.dart';
@@ -22,8 +23,11 @@ class _SignInScreenState extends State<SignInScreen> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -32,33 +36,40 @@ class _SignInScreenState extends State<SignInScreen> {
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.w500,
+                color: Colors.purple,
               ),
             ),
-            SizedBox(height: 16),
+            HeightCustom(16),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 60),
+              child: CustomText(
+                text: "Welcome Back you've been missed",
+                textAlign: TextAlign.center,
+                fontSize: 20,
+                color: Colors.grey.shade700,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: CustomText(
-                  text: "Welcome Back you've been missed",
-                  textAlign: TextAlign.center,
-                  fontSize: 24,
-                  // fontWeight: FontWeight.w600,
-                  wordSpacing: 0.3,
-                  letterSpacing: 0.3),
+              child: Column(
+                children: [
+                  CustomTextFeild(
+                    heading: 'Email',
+                    height: 80,
+                    controller: _emailController,
+                    hintText: 'suhailthakrani12@gmail.com',
+                  ),
+                  CustomTextFeild(
+                    heading: 'Password',
+                    height: 80,
+                    controller: _passController,
+                    suffix: const Icon(Icons.visibility),
+                    hintText: '* * * * * * * *',
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(height: 10),
-            CustomTextFeild(
-              height: 50,
-              controller: _emailController,
-              hintText: 'Enter email',
-            ),
-            const SizedBox(height: 10),
-            CustomTextFeild(
-              height: 50,
-              controller: _passController,
-              suffix: const Icon(Icons.visibility),
-              hintText: 'Enter password',
-            ),
-            const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -69,7 +80,8 @@ class _SignInScreenState extends State<SignInScreen> {
                     color: Colors.purple,
                     fontWeight: FontWeight.w600,
                   ),
-                )
+                ),
+                WidthCustom(10)
               ],
             ),
             const SizedBox(height: 10),
@@ -82,7 +94,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               height: 48,
-              width: MediaQuery.of(context).size.width * 0.8,
+              width: MediaQuery.of(context).size.width * 0.9,
               child: const Text(
                 'Sign In',
               ),
@@ -119,10 +131,10 @@ class _SignInScreenState extends State<SignInScreen> {
                 CustomButton(
                   height: 50,
                   width: 60,
+                  padding: EdgeInsets.all(12),
                   onPressed: () {},
                   child: Image.asset(
                     AssetManager.facebookLogo,
-                    height: 40,
                   ),
                 ),
                 CustomButton(
@@ -134,7 +146,35 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 )
               ],
-            )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const SignUpScreen()));
+                    },
+                    child: RichText(
+                        text: TextSpan(
+                            text: 'New Here?  ',
+                            style: TextStyle(
+                              color: Colors.grey.shade900,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            children: const [
+                          TextSpan(
+                              text: 'Sign Up',
+                              style: TextStyle(
+                                  color: Colors.purple,
+                                  fontWeight: FontWeight.w600,
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 16),
+                              children: [TextSpan(text: '     ')])
+                        ])))
+              ],
+            ),
           ],
         ),
       ),
