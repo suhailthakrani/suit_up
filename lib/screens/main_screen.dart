@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:suit_up/screens/account/account_scree.dart';
+import 'package:suit_up/screens/account/account_screen.dart';
 import 'package:suit_up/screens/home/home_screen.dart';
 
 class MainScreen extends StatefulWidget {

@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:suit_up/models/theme_model.dart';
+import 'package:suit_up/screens/main_screen.dart';
 import 'package:suit_up/theme/theme_constants.dart';
 import 'package:suit_up/theme/theme_manager.dart';
-import 'package:suit_up/screens/main_screen.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider<ThemeModel>(
-    create: (_) => ThemeModel(),
-    child: const MyApp(),
-  ));
+  runApp(
+    MyApp(),
+  );
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
+  final myTheme = ThemeData(
+    primarySwatch: Colors.purple,
+    brightness: Brightness.light,
+    fontFamily: 'Roboto',
+  );
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final themeModel = context.watch<ThemeModel>();
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      // theme: themeModel.themeType == ThemeType.Dark ? AppTheme.darkTheme: AppTheme.lightTheme,
-      theme: ThemeData.light(),
-
-      darkTheme: ThemeData.dark(),
-      home: const MainScreen(),
-    );
+    return ChangeNotifierProvider(
+        create: (_) => ThemeManager(),
+        child:
+            Consumer<ThemeManager>(builder: ((context, themeNotifier, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme:
+                themeNotifier.isDark ? AppTheme.darkTheme : AppTheme.lightTheme,
+            home: const MainScreen(),
+          );
+        })));
   }
 }
