@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:suit_up/controllers/theme_manager.dart';
+import 'package:suit_up/theme/theme_manager.dart';
 import 'package:suit_up/widgets/custom_textfeild.dart';
 
 class HomeScreen extends StatefulWidget {
