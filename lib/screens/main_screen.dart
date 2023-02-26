@@ -27,7 +27,7 @@ class _MainScreenState extends State<MainScreen> {
               selectedIndex = value;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
               label: 'Home',
               icon: Icon(
