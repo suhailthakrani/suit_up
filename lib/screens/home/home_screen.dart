@@ -1,12 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/services.dart';
 import 'package:suit_up/controllers/asset_manager.dart';
+import 'package:suit_up/models/products_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
-import 'package:suit_up/theme/theme_constants.dart';
-import 'package:suit_up/theme/theme_manager.dart';
-import 'package:suit_up/widgets/custom_textfeild.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,15 +16,34 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _searchController = TextEditingController();
-  final ThemeManager _themeManager = ThemeManager();
+  List products = [];
+  ProductsModel productsModel = ProductsModel(products: []);
+
+  ///
+  @override
+  void initState() {
+    loadProductsData();
+    super.initState();
+  }
+
+  Future<void> loadProductsData() async {
+    final String response =
+        await rootBundle.loadString('assets/json/products.json');
+    final data = jsonDecode(response);
+    setState(() {
+      productsModel = ProductsModel.fromJson(data);
+      products = data['products'];
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: AppTheme.lightTheme.scaffoldBackgroundColor,
       body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        child: Column(
+          // shrinkWrap: true,
+          // padding: EdgeInsets.all(16),
           children: [
             Row(
               children: [
@@ -65,116 +83,53 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     onPressed: () {},
                     child: const Icon(
-                      Icons.notifications,
-                      size: 35,
+                      Icons.notifications_outlined,
+                      size: 30,
                     ),
                   ),
                 ),
               ],
             ),
             HeightCustom(10),
-            SizedBox(
-              height: 130,
-              child: Card(
-                color: Colors.amber,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    AssetManager.cardImage,
-                    fit: BoxFit.fitWidth,
-                  ),
+            Card(
+              color: Colors.amber,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  AssetManager.cardImage,
+                  fit: BoxFit.fitWidth,
                 ),
               ),
             ),
             HeightCustom(16),
-            Container(
-              height: 50,
-              child: ListView.separated(
-                itemCount: 5,
-                scrollDirection: Axis.horizontal,
+            Flexible(
+              child: GridView.builder(
+                itemCount: productsModel.products.isNotEmpty
+                    ? productsModel.products.length
+                    : 0,
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
                 itemBuilder: (context, index) {
-                  return OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            5,
+                  return Column(
+                    children: [
+                      Card(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.asset(
+                            productsModel.products[index].imageUrl ?? '',
+                            height: 130,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
-                      onPressed: () {},
-                      child: const Text('Category'));
+                      Text('Rs. ${productsModel.products[index].price}'),
+                    ],
+                  );
                 },
-                separatorBuilder: (BuildContext context, int index) {
-                  return WidthCustom(5);
-                },
-              ),
-            ),
-            HeightCustom(16),
-            Container(
-              height: 500,
-              child: GridView(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                ),
-                children: [
-                  Card(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        AssetManager.card1,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        AssetManager.card2,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        AssetManager.card3,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        AssetManager.card4,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        AssetManager.card1,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Card(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        AssetManager.card2,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ],
               ),
             )
           ],
