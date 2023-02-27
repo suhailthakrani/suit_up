@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "name": "Kurta",
+            "imageUrl": "assets/images/c1.jpg",
+            "price": 2999,
+            "discount": 15,
+            "category": ""
+        },
+        {
+            "name": "Kurta",
+            "imageUrl": "assets/images/c2.jpg",
+            "price": 4599,
+            "discount": 15,
+            "category": ""
+        },
+        {
+            "name": "Kurta",
+            "imageUrl": "assets/images/c3.jpg",
+            "price": 5999,
+            "discount": 15,
+            "category": ""
+        },
+        {
+            "name": "Kurta",
+            "imageUrl": "assets/images/c4.jpg",
+            "price": 4999,
+            "discount": 15,
+            "category": ""
+        },
+        {
+            "name": "Kurta",
+            "imageUrl": "assets/images/c5.jpg",
+            "price": 3999,
+            "discount": 15,
+            "category": ""
+        },
+        {
+            "name": "Kurta",
+            "imageUrl": "assets/images/c1.jpg",
+            "price": 2499,
+            "discount": 15,
+            "category": ""
+        }
+    ]
+}
