@@ -67,8 +67,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         ),
         actions: [
           SizedBox(
-            height: 40,
-            width: 40,
+            height: 35,
+            width: 35,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.zero,
@@ -81,7 +81,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               onPressed: () {},
               child: const Icon(
                 Icons.notifications_outlined,
-                size: 30,
               ),
             ),
           ),
@@ -104,13 +103,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               // ),
               tabs: const [
                 Tab(
-                  child: const Text("Women"),
+                  child: Text("Women"),
                 ),
                 Tab(
-                  child: const Text("Men"),
+                  child: Text("Men"),
                 ),
                 Tab(
-                  child: const Text("Kids"),
+                  child: Text("Kids"),
                 ),
               ],
             ),

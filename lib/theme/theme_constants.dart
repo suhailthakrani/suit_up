@@ -6,6 +6,10 @@ class AppTheme {
     useMaterial3: true,
     primaryColor: Colors.purple,
     fontFamily: 'Roboto',
+    textTheme: TextTheme(
+        displayLarge: TextStyle(
+      color: Colors.grey.shade900,
+    )),
     appBarTheme: const AppBarTheme(
       color: Colors.purple,
     ),
