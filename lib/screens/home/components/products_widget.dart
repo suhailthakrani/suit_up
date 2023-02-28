@@ -21,48 +21,56 @@ class ProductsWidget extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 0.7,
-        crossAxisSpacing: 5,
-        mainAxisSpacing: 8,
+        crossAxisSpacing: 4,
+        mainAxisSpacing: 2,
       ),
       itemBuilder: (context, index) {
         return Stack(
           children: [
             InkWell(
               onTap: () {
+                print(index);
                 print(productsModel.products[index].imageUrl);
               },
               child: Card(
+                color: Colors.amber,
+                margin: index % 2 == 0
+                    ? EdgeInsets.only(left: 16)
+                    : EdgeInsets.only(right: 10, left: 4),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
                     productsModel.products[index].imageUrl ?? '',
                     height: 170,
-                    width: MediaQuery.of(context).size.width * 0.4,
+                    width: MediaQuery.of(context).size.width * 0.42,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
             Positioned(
-                top: 10,
-                right: 20,
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 24,
-                  width: 60,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.redAccent,
+              right: index % 2 == 0 ? 10 : 22,
+              child: Container(
+                alignment: Alignment.center,
+                height: 24,
+                width: 60,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(12),
+                    topRight: Radius.circular(12),
                   ),
-                  child: CustomText(
-                    text: "${productsModel.products[index].discount} % OFF",
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12,
-                  ),
-                )),
+                  color: Colors.redAccent,
+                ),
+                child: CustomText(
+                  text: "${productsModel.products[index].discount} % OFF",
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                ),
+              ),
+            ),
             Positioned(
-              bottom: 10,
+              bottom: 24,
               right: 10,
               left: 10,
               child: Row(

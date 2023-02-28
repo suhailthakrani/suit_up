@@ -98,55 +98,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             TabBar(
               physics: const BouncingScrollPhysics(),
               controller: _tabBarController,
-              indicator: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.purple.shade600,
-              ),
-              tabs: [
+              // indicator: BoxDecoration(
+              //   borderRadius: BorderRadius.circular(12),
+              //   color: Colors.purple.shade600,
+              // ),
+              tabs: const [
                 Tab(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 12,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: Colors.purple.shade600,
-                      ),
-                    ),
-                    child: Text("Female"),
-                  ),
+                  child: const Text("Women"),
                 ),
                 Tab(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 12,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: Colors.purple.shade600,
-                      ),
-                    ),
-                    child: Text("Male"),
-                  ),
+                  child: const Text("Men"),
                 ),
                 Tab(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 12,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: Colors.purple.shade600,
-                      ),
-                    ),
-                    child: Text("Kids"),
-                  ),
+                  child: const Text("Kids"),
                 ),
               ],
             ),
