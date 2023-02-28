@@ -7,6 +7,8 @@ import 'package:flutter/services.dart';
 import 'package:suit_up/controllers/asset_manager.dart';
 import 'package:suit_up/models/products_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
+import 'package:suit_up/screens/home/components/main_carousel_slider.dart';
+import 'package:suit_up/screens/home/components/products_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -87,56 +89,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            CarouselSlider(
-                options: CarouselOptions(height: 150),
-                items: [1, 2, 3, 4, 5].map((e) {
-                  return Builder(
-                    builder: (context) {
-                      return Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.all(8),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.asset(
-                            AssetManager.cardImage,
-                            height: 120,
-                            fit: BoxFit.fitWidth,
-                          ),
-                        ),
-                      );
-                    },
-                  );
-                }).toList()),
+            const MainCarouselSlider(),
             HeightCustom(16),
-            Flexible(
-              // height: 600,
-              child: GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: productsModel.products.isNotEmpty
-                    ? productsModel.products.length
-                    : 0,
-                shrinkWrap: true,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2),
-                itemBuilder: (context, index) {
-                  return Stack(
-                    children: [
-                      Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.asset(
-                            productsModel.products[index].imageUrl ?? '',
-                            // height: 130,
-                            fit: BoxFit.fitWidth,
-                          ),
-                        ),
-                      ),
-                      Text('Rs. ${productsModel.products[index].price}'),
-                    ],
-                  );
-                },
-              ),
-            )
+            ProductsWidget(productsModel: productsModel)
           ],
         ),
       ),
