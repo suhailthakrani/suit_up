@@ -17,14 +17,18 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final _searchController = TextEditingController();
   List products = [];
   ProductsModel productsModel = ProductsModel(products: []);
 
+  late TabController _tabBarController;
+  int selected = 0;
+
   ///
   @override
   void initState() {
+    _tabBarController = TabController(length: 3, vsync: this);
     loadProductsData();
     super.initState();
   }
@@ -84,14 +88,79 @@ class _HomeScreenState extends State<HomeScreen> {
           WidthCustom(10),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+      body: DefaultTabController(
+        initialIndex: 0,
+        length: 3,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             const MainCarouselSlider(),
-            HeightCustom(16),
-            ProductsWidget(productsModel: productsModel)
+            TabBar(
+              physics: const BouncingScrollPhysics(),
+              controller: _tabBarController,
+              indicator: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.purple.shade600,
+              ),
+              tabs: [
+                Tab(
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.purple.shade600,
+                      ),
+                    ),
+                    child: Text("Female"),
+                  ),
+                ),
+                Tab(
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.purple.shade600,
+                      ),
+                    ),
+                    child: Text("Male"),
+                  ),
+                ),
+                Tab(
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.purple.shade600,
+                      ),
+                    ),
+                    child: Text("Kids"),
+                  ),
+                ),
+              ],
+            ),
+            HeightCustom(10),
+            Flexible(
+              child: TabBarView(
+                controller: _tabBarController,
+                children: [
+                  ProductsWidget(productsModel: productsModel),
+                  ProductsWidget(productsModel: productsModel),
+                  ProductsWidget(productsModel: productsModel),
+                ],
+              ),
+            )
           ],
         ),
       ),
