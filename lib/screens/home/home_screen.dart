@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   }).toList()),
               HeightCustom(16),
-              Container(
+              SizedBox(
                 height: 600,
                 child: GridView.builder(
                   itemCount: productsModel.products.isNotEmpty
