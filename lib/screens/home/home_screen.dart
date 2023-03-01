@@ -4,11 +4,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:suit_up/controllers/asset_manager.dart';
 import 'package:suit_up/models/products_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/screens/home/components/main_carousel_slider.dart';
 import 'package:suit_up/screens/home/components/products_widget.dart';
+import 'package:suit_up/utils/dimensions.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -35,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   Future<void> loadProductsData() async {
     final String response =
-        await rootBundle.loadString('assets/json/products.json');
+        await rootBundle.loadString('assets/json/ladies_products.json');
     final data = jsonDecode(response);
     setState(() {
       productsModel = ProductsModel.fromJson(data);
@@ -66,22 +68,20 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ),
         actions: [
-          SizedBox(
-            height: 35,
-            width: 35,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.zero,
-                backgroundColor: Colors.grey.shade300,
-                elevation: 1,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              padding: EdgeInsets.zero,
+              backgroundColor: Colors.grey.shade300,
+              elevation: 1,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
               ),
-              onPressed: () {},
-              child: const Icon(
-                Icons.notifications_outlined,
-              ),
+            ),
+            onPressed: () {
+              print(Get.height);
+            },
+            child: const Icon(
+              Icons.notifications_outlined,
             ),
           ),
           WidthCustom(10),
@@ -93,6 +93,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            HeightCustom(5),
             const MainCarouselSlider(),
             TabBar(
               physics: const BouncingScrollPhysics(),

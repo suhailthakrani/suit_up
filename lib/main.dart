@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme:
                 themeNotifier.isDark ? AppTheme.darkTheme : AppTheme.lightTheme,
-            home: const HomeScreen(),
+            home: const MainScreen(),
           );
         })));
   }
