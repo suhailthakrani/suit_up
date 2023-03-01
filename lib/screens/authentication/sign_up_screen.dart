@@ -43,7 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: CustomText(
+            child: TextCustom(
               text: "Get started with your account",
               textAlign: TextAlign.center,
               fontSize: 18,
@@ -82,7 +82,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             children: [
               TextButton(
                 onPressed: () {},
-                child: CustomText(
+                child: TextCustom(
                   text: 'Forget Password?',
                   color: Colors.purple,
                   fontWeight: FontWeight.w600,

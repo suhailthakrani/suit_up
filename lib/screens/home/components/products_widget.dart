@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:suit_up/models/products_model.dart';
+import 'package:suit_up/screens/home/components/product_screen.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 
 class ProductsWidget extends StatelessWidget {
@@ -18,8 +19,9 @@ class ProductsWidget extends StatelessWidget {
       itemCount:
           productsModel.products.isNotEmpty ? productsModel.products.length : 0,
       shrinkWrap: true,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount:
+            MediaQuery.of(context).orientation == Orientation.portrait ? 2 : 3,
         childAspectRatio: 0.7,
         crossAxisSpacing: 4,
         mainAxisSpacing: 2,
@@ -29,14 +31,19 @@ class ProductsWidget extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                print(index);
-                print(productsModel.products[index].imageUrl);
+                // Navigator.push(
+                  // context,
+                  // MaterialPageRoute(
+                    // builder: (context) =>
+                        // ProductScreen(product: productsModel.products[index]),
+                  // ),
+                // );
               },
               child: Card(
                 color: Colors.amber,
                 margin: index % 2 == 0
-                    ? EdgeInsets.only(left: 16)
-                    : EdgeInsets.only(right: 10, left: 4),
+                    ? const EdgeInsets.only(left: 16)
+                    : const EdgeInsets.only(right: 10, left: 4),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
@@ -61,7 +68,7 @@ class ProductsWidget extends StatelessWidget {
                   ),
                   color: Colors.redAccent,
                 ),
-                child: CustomText(
+                child: TextCustom(
                   text: "${productsModel.products[index].discount} % OFF",
                   color: Colors.white,
                   fontWeight: FontWeight.w500,
@@ -80,13 +87,13 @@ class ProductsWidget extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomText(
+                      TextCustom(
                         text: productsModel.products[index].name ?? '',
                         color: Colors.purple,
                         fontWeight: FontWeight.w500,
                         fontSize: 18,
                       ),
-                      CustomText(
+                      TextCustom(
                         text: 'Rs. ${productsModel.products[index].price}',
                         color: Colors.grey.shade900,
                         fontWeight: FontWeight.w500,

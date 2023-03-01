@@ -42,7 +42,7 @@ class _SignInScreenState extends State<SignInScreen> {
             HeightCustom(16),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 60),
-              child: CustomText(
+              child: TextCustom(
                 text: "Welcome Back you've been missed",
                 textAlign: TextAlign.center,
                 fontSize: 20,
@@ -75,7 +75,7 @@ class _SignInScreenState extends State<SignInScreen> {
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: CustomText(
+                  child: TextCustom(
                     text: 'Forget Password?',
                     color: Colors.purple,
                     fontWeight: FontWeight.w600,

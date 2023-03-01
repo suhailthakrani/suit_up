@@ -28,7 +28,7 @@ class CustomTextFeild extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomText(
+          TextCustom(
             text: "  $heading",
             fontWeight: FontWeight.w500,
             fontSize: 16,

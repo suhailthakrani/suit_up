@@ -52,7 +52,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.edit,
                   color: isDark ? Colors.white : Colors.grey.shade900,
                 ),
-                title: CustomText(text: 'Edit Profile'),
+                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 16,
@@ -64,7 +64,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.edit,
                   color: isDark ? Colors.white : Colors.grey.shade900,
                 ),
-                title: CustomText(text: 'Edit Profile'),
+                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 16,
@@ -76,7 +76,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.edit,
                   color: isDark ? Colors.white : Colors.grey.shade900,
                 ),
-                title: CustomText(text: 'Edit Profile'),
+                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 16,
@@ -88,7 +88,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.edit,
                   color: isDark ? Colors.white : Colors.grey.shade900,
                 ),
-                title: CustomText(text: 'Edit Profile'),
+                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 16,
@@ -100,7 +100,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.edit,
                   color: isDark ? Colors.white : Colors.grey.shade900,
                 ),
-                title: CustomText(text: 'Edit Profile'),
+                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 16,
@@ -112,7 +112,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.edit,
                   color: isDark ? Colors.white : Colors.grey.shade900,
                 ),
-                title: CustomText(text: 'Edit Profile'),
+                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 16,
@@ -124,7 +124,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.edit,
                   color: isDark ? Colors.white : Colors.grey.shade900,
                 ),
-                title: CustomText(text: 'Edit Profile'),
+                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 16,
@@ -136,7 +136,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.edit,
                   color: isDark ? Colors.white : Colors.grey.shade900,
                 ),
-                title: CustomText(text: 'Edit Profile'),
+                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
                   size: 16,

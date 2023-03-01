@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class CustomText extends StatelessWidget {
+class TextCustom extends StatelessWidget {
   final String text;
   TextAlign? textAlign;
   Color? color;
@@ -31,7 +31,7 @@ class CustomText extends StatelessWidget {
   String? package;
   TextOverflow? overflow;
 
-  CustomText({
+  TextCustom({
     Key? key,
     required this.text,
     this.textAlign,
