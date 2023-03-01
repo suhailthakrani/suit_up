@@ -31,13 +31,13 @@ class ProductsWidget extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                // Navigator.push(
-                  // context,
-                  // MaterialPageRoute(
-                    // builder: (context) =>
-                        // ProductScreen(product: productsModel.products[index]),
-                  // ),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        ProductScreen(product: productsModel.products[index]),
+                  ),
+                );
               },
               child: Card(
                 color: Colors.amber,

@@ -8,10 +8,10 @@ import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 
 class ProductScreen extends StatefulWidget {
-  // final Products product;
+  final Products product;
   const ProductScreen({
     Key? key,
-    // required this.product,
+    required this.product,
   }) : super(key: key);
 
   @override
@@ -23,14 +23,15 @@ class _ProductScreenState extends State<ProductScreen> {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    double priceAfterDiscount = widget.product.price! -
+        (widget.product.price! * widget.product.discount! / 100);
     return Scaffold(
       body: Stack(
         children: [
-          // Image(image: AssetImage(widget.product.imageUrl?? ''),),
           Column(
             children: [
               Image.asset(
-                'assets/images/c9.jpg',
+                widget.product.imageUrl ?? '',
                 fit: BoxFit.cover,
                 height: height * 0.6,
                 width: width,
@@ -38,15 +39,17 @@ class _ProductScreenState extends State<ProductScreen> {
             ],
           ),
           Positioned(
-            top: 30,
+            top: 35,
             right: 10,
             left: 10,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
-                  child: Icon(Icons.arrow_back_ios),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Icon(Icons.arrow_back_ios),
                 ),
                 ElevatedButton(
                   onPressed: () {},
@@ -55,20 +58,19 @@ class _ProductScreenState extends State<ProductScreen> {
               ],
             ),
           ),
-
           Positioned(
-            top: height * 0.5,
+            top: height * 0.45,
             child: Container(
-              height: height * 0.5,
+              height: height * 0.55,
               width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(24),
-                  topRight: Radius.circular(24),
+              decoration: BoxDecoration(
+                color: Colors.grey.shade50,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
                 ),
               ),
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -76,14 +78,16 @@ class _ProductScreenState extends State<ProductScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TextCustom(
-                        text: 'Product Name',
-                        fontSize: 20,
+                        text: widget.product.name ?? '',
+                        fontSize: 22,
                         fontWeight: FontWeight.w600,
                         color: Colors.purple,
                       ),
                       Container(
                         height: 50,
-                        decoration: BoxDecoration(color: Colors.pink),
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade200,
+                            borderRadius: BorderRadius.circular(12)),
                         child: Wrap(
                           crossAxisAlignment: WrapCrossAlignment.center,
                           children: [
@@ -93,7 +97,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                 CupertinoIcons.minus,
                               ),
                             ),
-                            Text("Q"),
+                            Text('0'),
                             IconButton(
                               onPressed: () {},
                               icon: Icon(
@@ -106,22 +110,51 @@ class _ProductScreenState extends State<ProductScreen> {
                     ],
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TextCustom(text: 'Rs. Price'),
-                      WidthCustom(5),
-                      Icon(
-                        Icons.star,
-                        color: Colors.orange,
+                      Row(
+                        children: [
+                          TextCustom(
+                            text: "Rs. ${priceAfterDiscount.toInt()}",
+                            fontWeight: FontWeight.w500,
+                            fontSize: 20,
+                            color: Colors.red.shade900,
+                          ),
+                          WidthCustom(5),
+                          TextCustom(
+                            text: "${widget.product.price}",
+                            // fontWeight: FontWeight.w500,
+                            fontSize: 18,
+                            color: Colors.black87,
+                            decoration: TextDecoration.lineThrough,
+                          ),
+                        ],
                       ),
-                      WidthCustom(5),
-                      TextCustom(text: '(300 Reviews)')
+                      Row(
+                        children: [
+                          const Icon(
+                            Icons.star,
+                            color: Colors.orange,
+                          ),
+                          WidthCustom(5),
+                          TextCustom(
+                            text: '300+ Reviews',
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey.shade600,
+                          ),
+                        ],
+                      )
                     ],
                   ),
+                  HeightCustom(8),
                   TextCustom(
                     text: 'Size',
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
+                    color: Colors.grey.shade700,
                   ),
+                  HeightCustom(8),
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: ProductSize.values
@@ -131,34 +164,47 @@ class _ProductScreenState extends State<ProductScreen> {
                               padding: EdgeInsets.only(right: 3),
                               child: OutlinedButton(
                                   onPressed: () {},
+                                  style: OutlinedButton.styleFrom(
+                                    padding: EdgeInsets.zero,
+                                  ),
                                   child: TextCustom(
                                     text: e.name,
-                                    fontSize: 10,
+                                    fontSize: 16,
                                   )),
                             ))
                         .toList(),
                   ),
+                  HeightCustom(8),
+                  TextCustom(
+                    text: 'Colors',
+                    color: Colors.grey.shade700,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  HeightCustom(8),
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: PColors.values.map((e) {
-                      final color = e.name;
+                    children: colors.map((e) {
                       return Container(
                         height: 30,
                         width: 30,
-                        padding: EdgeInsets.only(right: 8),
-                        margin: EdgeInsets.only(right: 8),
+                        padding: const EdgeInsets.only(right: 8),
+                        margin: const EdgeInsets.only(right: 8),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Colors.red,
+                          color: e,
                         ),
                       );
                     }).toList(),
                   ),
+                  HeightCustom(8),
                   TextCustom(
                     text: 'Description',
+                    color: Colors.grey.shade700,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
+                  HeightCustom(8),
                   Expanded(
                     child: TextCustom(
                         textAlign: TextAlign.justify,
@@ -173,6 +219,14 @@ class _ProductScreenState extends State<ProductScreen> {
       ),
     );
   }
+
+  static List<Color> colors = [
+    Colors.blue,
+    Colors.red,
+    Colors.green,
+    Colors.pink,
+    Colors.indigo
+  ];
 }
 
 enum ProductSize { S, M, L, XL, XXL }
