@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:suit_up/screens/account/account_screen.dart';
+import 'package:suit_up/screens/cart/cart_screen.dart';
 import 'package:suit_up/screens/home/home_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -15,6 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   int selectedIndex = 0;
   final screens = [
     const HomeScreen(),
+    const CartScreen(),
     const AccountScreen(),
   ];
   @override
@@ -22,6 +25,9 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+          currentIndex: selectedIndex,
+          selectedItemColor: Colors.purple,
+          unselectedItemColor: Colors.grey,
           onTap: (value) {
             setState(() {
               selectedIndex = value;
@@ -32,6 +38,12 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Home',
               icon: Icon(
                 Icons.home,
+              ),
+            ),
+            BottomNavigationBarItem(
+              label: 'Cart',
+              icon: Icon(
+                CupertinoIcons.shopping_cart,
               ),
             ),
             BottomNavigationBarItem(

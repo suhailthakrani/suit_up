@@ -43,7 +43,7 @@ class ProductCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(Dimensions.radius12),
                     child: Image.asset(
                       product.imageUrl ?? '',
-                      height: Dimensions.height220,
+                      height: Dimensions.height200,
                       width: MediaQuery.of(context).size.width * 0.45,
                       fit: BoxFit.cover,
                     ),
@@ -104,7 +104,7 @@ class ProductCard extends StatelessWidget {
           ),
           Positioned(
             top: 4,
-            right: Dimensions.height10 - 2,
+            right: Dimensions.height10 - 4,
             child: Container(
               alignment: Alignment.center,
               height: Dimensions.height30,
@@ -125,7 +125,7 @@ class ProductCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: Dimensions.width5,
+            top: Dimensions.width10,
             left: Dimensions.height16,
             child: Container(
               height: Dimensions.height30 + 2,

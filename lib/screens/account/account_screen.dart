@@ -3,13 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 
 import 'package:suit_up/theme/theme_constants.dart';
 import 'package:suit_up/theme/theme_manager.dart';
 import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/custom_text.dart';
-
-ThemeManager themeManager = ThemeManager();
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -20,11 +19,7 @@ class AccountScreen extends StatefulWidget {
 
 class _AccountScreenState extends State<AccountScreen> {
   bool isDark = false;
-  final myTheme = ThemeData(
-    primarySwatch: Colors.green,
-    brightness: Brightness.dark,
-    fontFamily: 'Open Sans',
-  );
+
   @override
   Widget build(BuildContext context) {
     return Consumer<ThemeManager>(
@@ -35,25 +30,29 @@ class _AccountScreenState extends State<AccountScreen> {
             padding: EdgeInsets.all(Dimensions.width12),
             children: [
               SizedBox(
-                height: Dimensions.width150,
+                height: Dimensions.width180,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(Dimensions.radius30),
-                      child: CircleAvatar(
-                        radius: Dimensions.height60,
-                        backgroundColor: Colors.amber,
-                        foregroundImage: const AssetImage(
-                          'assets/images/apple.png',
+                    CircleAvatar(
+                      radius: Dimensions.height60,
+                      backgroundColor: Colors.grey.shade300,
+                      child: const Padding(
+                        padding: EdgeInsets.all(4.0),
+                        child: Image(
+                          image: AssetImage(
+                            'assets/images/apple.png',
+                          ),
                         ),
                       ),
                     ),
+                    HeightCustom(3),
                     TextCustom(
                       text: 'Suhail Thakrani',
                       fontSize: Dimensions.font16,
                       fontWeight: FontWeight.w600,
                     ),
+                    HeightCustom(2),
                     TextCustom(
                       text: 'suhailthakrani12@gmail.com',
                       fontSize: Dimensions.font12,
@@ -62,35 +61,12 @@ class _AccountScreenState extends State<AccountScreen> {
                   ],
                 ),
               ),
-              Center(
-                child: ElevatedButton.icon(
-                  icon: Icon(
-                    themeNotifier.isDark
-                        ? Icons.nightlight_round
-                        : Icons.wb_sunny,
-                  ),
-                  onPressed: () {
-                    themeNotifier.isDark
-                        ? themeNotifier.isDark = false
-                        : themeNotifier.isDark = true;
-                  },
-                  label: Text(
-                    themeNotifier.isDark ? 'Dark Mode' : 'Light Mode',
-                  ),
-                ),
-              ),
+              HeightCustom(Dimensions.height16),
               CustomTile(
                 isDark: isDark,
                 title: 'Edit Your Profile',
                 leading: Icon(
                   Icons.edit,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: Dimensions.width16,
                   color: isDark
                       ? AppTheme.darkTheme.listTileTheme.iconColor
                       : AppTheme.lightTheme.listTileTheme.iconColor,
@@ -105,31 +81,19 @@ class _AccountScreenState extends State<AccountScreen> {
                       ? AppTheme.darkTheme.listTileTheme.iconColor
                       : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: Dimensions.width16,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
               ),
+              HeightCustom(Dimensions.height8),
               CustomTile(
                 isDark: isDark,
-                title: 'Downloads',
+                title: 'Reorder',
                 leading: Icon(
-                  Icons.download,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: Dimensions.width16,
+                  Icons.shopify_outlined,
                   color: isDark
                       ? AppTheme.darkTheme.listTileTheme.iconColor
                       : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
               ),
+              HeightCustom(Dimensions.height8),
               CustomTile(
                 leading: Icon(
                   Icons.language,
@@ -139,14 +103,8 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 isDark: isDark,
                 title: 'Language',
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: Dimensions.width16,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
               ),
+              HeightCustom(Dimensions.height8),
               CustomTile(
                 leading: Icon(
                   themeNotifier.isDark
@@ -156,49 +114,20 @@ class _AccountScreenState extends State<AccountScreen> {
                       ? AppTheme.darkTheme.listTileTheme.iconColor
                       : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                title: 'Dark Mode',
-                isDark: isDark,
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: Dimensions.width16,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
+                title: themeNotifier.isDark ? 'Dark Mode' : 'Light Mode',
+                isDark: themeNotifier.isDark,
+                trailing: Switch(
+                    value: themeNotifier.isDark,
+                    onChanged: (value) {
+                      setState(() {
+                        themeNotifier.isDark = value;
+                      });
+                    }),
               ),
               CustomTile(
-                leading: Icon(
-                  Icons.wifi,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
-                title: 'Only Download via WiFi',
+                title: 'Log Out',
                 isDark: isDark,
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: Dimensions.width16,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
-              ),
-              CustomTile(
-                title: 'Play in Ground',
-                isDark: isDark,
-                leading: Icon(
-                  CupertinoIcons.play_rectangle,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: Dimensions.width16,
-                  color: isDark
-                      ? AppTheme.darkTheme.listTileTheme.iconColor
-                      : AppTheme.lightTheme.listTileTheme.iconColor,
-                ),
+                leading: Icon(Icons.logout_outlined),
               ),
             ],
           ),
@@ -216,7 +145,10 @@ class CustomTile extends StatelessWidget {
   final Widget leading;
   const CustomTile({
     Key? key,
-    required this.trailing,
+    this.trailing = const Icon(
+      Icons.arrow_forward_ios,
+      size: 16,
+    ),
     required this.title,
     required this.isDark,
     required this.leading,
