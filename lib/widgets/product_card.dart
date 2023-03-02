@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:suit_up/models/products_model.dart';
+import 'package:suit_up/models/product_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/screens/home/components/product_screen.dart';
 import 'package:suit_up/utils/dimensions.dart';
@@ -12,7 +12,7 @@ class ProductCard extends StatelessWidget {
     required this.product,
   }) : super(key: key);
 
-  final Products product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {

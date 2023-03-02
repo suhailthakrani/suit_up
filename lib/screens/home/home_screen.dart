@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:suit_up/controllers/asset_manager.dart';
-import 'package:suit_up/models/products_model.dart';
+import 'package:suit_up/models/product_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/screens/home/components/main_carousel_slider.dart';
 import 'package:suit_up/screens/home/components/products_widget.dart';
@@ -22,7 +22,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final _searchController = TextEditingController();
   List products = [];
-  ProductsModel productsModel = ProductsModel(products: []);
+  ProductModel productModel = ProductModel(products: []);
 
   late TabController _tabBarController;
   int selected = 0;
@@ -40,8 +40,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         await rootBundle.loadString('assets/json/ladies_products.json');
     final data = jsonDecode(response);
     setState(() {
-      productsModel = ProductsModel.fromJson(data);
+      productModel = ProductModel.fromJson(data);
       products = data['products'];
+      print(data['products']);
     });
   }
 
@@ -68,20 +69,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ),
         actions: [
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.zero,
-              backgroundColor: Colors.grey.shade300,
-              elevation: 1,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(Dimensions.radius10),
+          SizedBox(
+            height: Dimensions.width35,
+            width: Dimensions.width35,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.zero,
+                backgroundColor: Colors.grey.shade300,
+                elevation: 1,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(Dimensions.radius10),
+                ),
               ),
-            ),
-            onPressed: () {
-              print(Get.height);
-            },
-            child: const Icon(
-              Icons.notifications_outlined,
+              onPressed: () {},
+              child: const Icon(
+                Icons.notifications_outlined,
+              ),
             ),
           ),
           WidthCustom(Dimensions.width10),
@@ -119,9 +122,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               child: TabBarView(
                 controller: _tabBarController,
                 children: [
-                  ProductsWidget(productsModel: productsModel),
-                  ProductsWidget(productsModel: productsModel),
-                  ProductsWidget(productsModel: productsModel),
+                  ProductWidget(productModel: productModel),
+                  ProductWidget(productModel: productModel),
+                  ProductWidget(productModel: productModel),
                 ],
               ),
             )

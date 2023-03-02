@@ -1,14 +1,15 @@
-class ProductsModel {
-  List<Products> products = [];
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+class ProductModel {
+  List<Product> products = [];
 
-  ProductsModel({required this.products});
+  ProductModel({required this.products});
 
-  ProductsModel.fromJson(Map<String, dynamic> json) {
+  ProductModel.fromJson(Map<String, dynamic> json) {
     if (json['products'] != null) {
-      products = <Products>[];
+      products = <Product>[];
       json['products'].forEach((v) {
         // ignore: unnecessary_new
-        products.add(new Products.fromJson(v));
+        products.add(new Product.fromJson(v));
       });
     }
   }
@@ -22,22 +23,30 @@ class ProductsModel {
   }
 }
 
-class Products {
+class Product {
   String? name;
   String? imageUrl;
   int? price;
   int? discount;
   String? category;
+  String? description;
 
-  Products(
-      {this.name, this.imageUrl, this.price, this.discount, this.category});
+  Product({
+    this.name,
+    this.imageUrl,
+    this.price,
+    this.discount,
+    this.category,
+    this.description,
+  });
 
-  Products.fromJson(Map<String, dynamic> json) {
+  Product.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     imageUrl = json['imageUrl'];
     price = json['price'];
     discount = json['discount'];
     category = json['category'];
+    description = json['description'];
   }
 
   Map<String, dynamic> toJson() {
@@ -47,6 +56,7 @@ class Products {
     data['price'] = price;
     data['discount'] = discount;
     data['category'] = category;
+    data['description'] = description;
     return data;
   }
 }

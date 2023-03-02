@@ -3,12 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:suit_up/models/products_model.dart';
+import 'package:suit_up/models/product_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
+import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 
 class ProductScreen extends StatefulWidget {
-  final Products product;
+  final Product product;
   const ProductScreen({
     Key? key,
     required this.product,
@@ -39,9 +40,9 @@ class _ProductScreenState extends State<ProductScreen> {
             ],
           ),
           Positioned(
-            top: 35,
-            right: 10,
-            left: 10,
+            top: Dimensions.height35,
+            right: Dimensions.width10,
+            left: Dimensions.width10,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -67,12 +68,14 @@ class _ProductScreenState extends State<ProductScreen> {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 color: Colors.grey.shade50,
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(Dimensions.radius30),
+                  topRight: Radius.circular(Dimensions.radius30),
                 ),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              padding: EdgeInsets.symmetric(
+                  horizontal: Dimensions.width16,
+                  vertical: Dimensions.height20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -81,33 +84,33 @@ class _ProductScreenState extends State<ProductScreen> {
                     children: [
                       TextCustom(
                         text: widget.product.name ?? '',
-                        fontSize: 22,
+                        fontSize: Dimensions.font24,
                         fontWeight: FontWeight.w600,
                         color: Colors.purple,
                       ),
-                      Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.shade200,
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Wrap(
-                          crossAxisAlignment: WrapCrossAlignment.center,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                CupertinoIcons.minus,
-                              ),
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                          IconButton(
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.grey.shade200),
+                            onPressed: () {},
+                            icon: const Icon(
+                              CupertinoIcons.minus,
                             ),
-                            Text('0'),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                CupertinoIcons.plus,
-                              ),
-                            )
-                          ],
-                        ),
+                          ),
+                          WidthCustom(5),
+                          const Text('0'),
+                          WidthCustom(5),
+                          IconButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.grey.shade200),
+                            icon: const Icon(
+                              CupertinoIcons.plus,
+                            ),
+                          )
+                        ],
                       ),
                     ],
                   ),
@@ -119,14 +122,14 @@ class _ProductScreenState extends State<ProductScreen> {
                           TextCustom(
                             text: "Rs. ${priceAfterDiscount.toInt()}",
                             fontWeight: FontWeight.w500,
-                            fontSize: 20,
+                            fontSize: Dimensions.font20,
                             color: Colors.red.shade900,
                           ),
                           WidthCustom(5),
                           TextCustom(
                             text: "${widget.product.price}",
                             // fontWeight: FontWeight.w500,
-                            fontSize: 18,
+                            fontSize: Dimensions.font18,
                             color: Colors.black87,
                             decoration: TextDecoration.lineThrough,
                           ),
@@ -141,7 +144,7 @@ class _ProductScreenState extends State<ProductScreen> {
                           WidthCustom(5),
                           TextCustom(
                             text: '300+ Reviews',
-                            fontSize: 12,
+                            fontSize: Dimensions.font12,
                             fontWeight: FontWeight.w500,
                             color: Colors.grey.shade600,
                           ),
@@ -149,21 +152,21 @@ class _ProductScreenState extends State<ProductScreen> {
                       )
                     ],
                   ),
-                  HeightCustom(8),
+                  HeightCustom(Dimensions.height8),
                   TextCustom(
                     text: 'Size',
-                    fontSize: 16,
+                    fontSize: Dimensions.font16,
                     fontWeight: FontWeight.w600,
                     color: Colors.grey.shade700,
                   ),
-                  HeightCustom(8),
+                  HeightCustom(Dimensions.height8),
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: ProductSize.values
                         .map((e) => Container(
-                              height: 40,
-                              width: 55,
-                              padding: EdgeInsets.only(right: 3),
+                              height: Dimensions.height40,
+                              width: Dimensions.height50 + 5,
+                              padding: const EdgeInsets.only(right: 3),
                               child: OutlinedButton(
                                   onPressed: () {},
                                   style: OutlinedButton.styleFrom(
@@ -176,37 +179,38 @@ class _ProductScreenState extends State<ProductScreen> {
                             ))
                         .toList(),
                   ),
-                  HeightCustom(8),
+                  HeightCustom(Dimensions.height8),
                   TextCustom(
                     text: 'Colors',
                     color: Colors.grey.shade700,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
-                  HeightCustom(8),
+                  HeightCustom(Dimensions.height8),
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: colors.map((e) {
                       return Container(
-                        height: 30,
-                        width: 30,
-                        padding: const EdgeInsets.only(right: 8),
-                        margin: const EdgeInsets.only(right: 8),
+                        height: Dimensions.height30,
+                        width: Dimensions.width30,
+                        padding: EdgeInsets.only(right: Dimensions.height8),
+                        margin: EdgeInsets.only(right: Dimensions.height8),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
+                          border: Border.all(color: Colors.purple),
                           color: e,
                         ),
                       );
                     }).toList(),
                   ),
-                  HeightCustom(8),
+                  HeightCustom(Dimensions.height8),
                   TextCustom(
                     text: 'Description',
                     color: Colors.grey.shade700,
-                    fontSize: 16,
+                    fontSize: Dimensions.font16,
                     fontWeight: FontWeight.w600,
                   ),
-                  HeightCustom(8),
+                  HeightCustom(Dimensions.height8),
                   Expanded(
                     child: TextCustom(
                         textAlign: TextAlign.justify,
@@ -216,7 +220,19 @@ class _ProductScreenState extends State<ProductScreen> {
                 ],
               ),
             ),
-          )
+          ),
+          Positioned(
+              bottom: 10,
+              left: 16,
+              right: 16,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+                child: TextCustom(
+                  text: "Add to Card",
+                  color: Colors.white,
+                ),
+              ))
         ],
       ),
     );
@@ -227,7 +243,8 @@ class _ProductScreenState extends State<ProductScreen> {
     Colors.red,
     Colors.green,
     Colors.pink,
-    Colors.indigo
+    Colors.indigo,
+    Colors.deepPurple
   ];
 }
 
