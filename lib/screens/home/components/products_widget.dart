@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:suit_up/models/products_model.dart';
+import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/screens/home/components/product_screen.dart';
+import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 
 class ProductsWidget extends StatelessWidget {
@@ -23,104 +25,148 @@ class ProductsWidget extends StatelessWidget {
         crossAxisCount:
             MediaQuery.of(context).orientation == Orientation.portrait ? 2 : 3,
         childAspectRatio: 0.7,
-        crossAxisSpacing: 4,
-        mainAxisSpacing: 2,
+        crossAxisSpacing: Dimensions.width10,
+        mainAxisSpacing: Dimensions.width10,
       ),
       itemBuilder: (context, index) {
-        return Stack(
-          children: [
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        ProductScreen(product: productsModel.products[index]),
-                  ),
-                );
-              },
-              child: Card(
-                color: Colors.amber,
-                margin: index % 2 == 0
-                    ? const EdgeInsets.only(left: 16)
-                    : const EdgeInsets.only(right: 10, left: 4),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    productsModel.products[index].imageUrl ?? '',
-                    height: 170,
-                    width: MediaQuery.of(context).size.width * 0.42,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              right: index % 2 == 0 ? 10 : 22,
-              child: Container(
-                alignment: Alignment.center,
-                height: 24,
-                width: 60,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(12),
-                    topRight: Radius.circular(12),
-                  ),
-                  color: Colors.redAccent,
-                ),
-                child: TextCustom(
-                  text: "${productsModel.products[index].discount} % OFF",
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 12,
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: 24,
-              right: 10,
-              left: 10,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        return Container(
+          // color: Colors.amber,
+          alignment: Alignment.center,
+          child: Stack(
+            children: [
+              Column(
                 children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      TextCustom(
-                        text: productsModel.products[index].name ?? '',
-                        color: Colors.purple,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductScreen(
+                              product: productsModel.products[index]),
+                        ),
+                      );
+                    },
+                    child: Card(
+                      color: Colors.amber,
+                      // margin: index % 2 == 0
+                      //     ? EdgeInsets.only(left: Dimensions.height16)
+                      //     : EdgeInsets.only(
+                      //         right: Dimensions.width10,
+                      //         left: Dimensions.width5),
+                      child: ClipRRect(
+                        borderRadius:
+                            BorderRadius.circular(Dimensions.radius12),
+                        child: Image.asset(
+                          productsModel.products[index].imageUrl ?? '',
+                          height: Dimensions.height220,
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                      TextCustom(
-                        text: 'Rs. ${productsModel.products[index].price}',
-                        color: Colors.grey.shade900,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13,
-                      ),
-                    ],
-                  ),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    margin: EdgeInsets.only(right: 8),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      color: Colors.grey.shade200,
                     ),
-                    child: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          CupertinoIcons.cart,
-                          size: 24,
-                          color: Colors.purple,
-                        )),
+                  ),
+                  HeightCustom(Dimensions.height8),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                productsModel.products[index].name ?? '',
+                                softWrap: true,
+                                style: TextStyle(
+                                  overflow: TextOverflow.ellipsis,
+                                  color: Colors.purple,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: Dimensions.font18,
+                                ),
+                              ),
+                              TextCustom(
+                                text:
+                                    'Rs. ${productsModel.products[index].price}',
+                                color: Colors.grey.shade900,
+                                fontWeight: FontWeight.w500,
+                                fontSize: Dimensions.font13,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: Dimensions.height45,
+                          width: Dimensions.height45,
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(Dimensions.radius40),
+                            color: Colors.grey.shade200,
+                          ),
+                          child: IconButton(
+                              onPressed: () {},
+                              style: IconButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                              ),
+                              icon: Icon(
+                                CupertinoIcons.cart,
+                                size: Dimensions.iconSize24,
+                                color: Colors.purple,
+                              )),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
-            ),
-          ],
+              Positioned(
+                top: 4,
+                right: index % 2 == 0
+                    ? Dimensions.width10 - 4
+                    : Dimensions.height10,
+                child: Container(
+                  alignment: Alignment.center,
+                  height: Dimensions.height30,
+                  width: Dimensions.height60,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(Dimensions.radius12),
+                      topRight: Radius.circular(Dimensions.radius12),
+                    ),
+                    color: Colors.redAccent,
+                  ),
+                  child: TextCustom(
+                    text: "${productsModel.products[index].discount} % OFF",
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: Dimensions.font12,
+                  ),
+                ),
+              ),
+              Positioned(
+                top: Dimensions.width5,
+                left: Dimensions.height16,
+                child: Container(
+                  height: Dimensions.height30 + 2,
+                  width: Dimensions.height30 + 2,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.radius40),
+                    color: Colors.grey.shade200,
+                  ),
+                  child: IconButton(
+                      onPressed: () {},
+                      style: IconButton.styleFrom(
+                        padding: EdgeInsets.zero,
+                      ),
+                      icon: Icon(
+                        CupertinoIcons.heart,
+                        size: Dimensions.iconSize24,
+                        color: Colors.purple,
+                      )),
+                ),
+              ),
+            ],
+          ),
         );
       },
     );

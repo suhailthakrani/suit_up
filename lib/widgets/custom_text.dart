@@ -66,6 +66,7 @@ class TextCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+      softWrap: true,
       textAlign: textAlign,
       style: TextStyle(
         color: color,

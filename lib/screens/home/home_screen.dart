@@ -51,12 +51,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       // backgroundColor: AppTheme.lightTheme.scaffoldBackgroundColor,
 
       appBar: AppBar(
-        toolbarHeight: 60,
+        toolbarHeight: Dimensions.height60,
         title: CupertinoTextField(
           placeholder: 'Type here',
-          prefix: const Padding(
-            padding: EdgeInsets.only(left: 5.0),
-            child: Icon(
+          prefix: Padding(
+            padding: EdgeInsets.only(left: Dimensions.width5),
+            child: const Icon(
               CupertinoIcons.search,
               color: Colors.purple,
             ),
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           controller: _searchController,
           decoration: BoxDecoration(
             color: Colors.grey.shade200,
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(Dimensions.radius12),
           ),
         ),
         actions: [
@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               backgroundColor: Colors.grey.shade300,
               elevation: 1,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(Dimensions.radius10),
               ),
             ),
             onPressed: () {
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               Icons.notifications_outlined,
             ),
           ),
-          WidthCustom(10),
+          WidthCustom(Dimensions.width10),
         ],
       ),
       body: DefaultTabController(
@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ],
             ),
-            HeightCustom(10),
+            HeightCustom(Dimensions.height10),
             Flexible(
               child: TabBarView(
                 controller: _tabBarController,

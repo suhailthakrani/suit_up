@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:suit_up/controllers/asset_manager.dart';
+import 'package:suit_up/utils/dimensions.dart';
 
 class MainCarouselSlider extends StatelessWidget {
   const MainCarouselSlider({
@@ -18,7 +19,7 @@ class MainCarouselSlider extends StatelessWidget {
     ];
     return CarouselSlider(
         options: CarouselOptions(
-          height: 160,
+          height: Dimensions.height160,
           autoPlay: true,
         ),
         items: [0, 1, 2, 3, 4].map((index) {
@@ -26,14 +27,14 @@ class MainCarouselSlider extends StatelessWidget {
             builder: (context) {
               return Container(
                 width: MediaQuery.of(context).size.width,
-                margin: const EdgeInsets.all(8),
+                margin: EdgeInsets.all(Dimensions.font10),
                 child: Card(
                   elevation: 5,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(Dimensions.radius12),
                     child: Image.asset(
                       images[index],
-                      height: 140,
+                      height: Dimensions.height140,
                       fit: BoxFit.fitWidth,
                     ),
                   ),
