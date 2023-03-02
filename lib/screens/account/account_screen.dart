@@ -1,8 +1,12 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+
 import 'package:suit_up/theme/theme_constants.dart';
 import 'package:suit_up/theme/theme_manager.dart';
+import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 
 ThemeManager themeManager = ThemeManager();
@@ -28,8 +32,36 @@ class _AccountScreenState extends State<AccountScreen> {
       return Scaffold(
         body: SafeArea(
           child: ListView(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(Dimensions.width12),
             children: [
+              SizedBox(
+                height: Dimensions.width150,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(Dimensions.radius30),
+                      child: CircleAvatar(
+                        radius: Dimensions.height60,
+                        backgroundColor: Colors.amber,
+                        foregroundImage: const AssetImage(
+                          'assets/images/apple.png',
+                        ),
+                      ),
+                    ),
+                    TextCustom(
+                      text: 'Suhail Thakrani',
+                      fontSize: Dimensions.font16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    TextCustom(
+                      text: 'suhailthakrani12@gmail.com',
+                      fontSize: Dimensions.font12,
+                      fontWeight: FontWeight.w500,
+                    )
+                  ],
+                ),
+              ),
               Center(
                 child: ElevatedButton.icon(
                   icon: Icon(
@@ -47,100 +79,125 @@ class _AccountScreenState extends State<AccountScreen> {
                   ),
                 ),
               ),
-              ListTile(
+              CustomTile(
+                isDark: isDark,
+                title: 'Edit Your Profile',
                 leading: Icon(
                   Icons.edit,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
-                  size: 16,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  size: Dimensions.width16,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
               ),
-              ListTile(
+              CustomTile(
+                isDark: isDark,
+                title: 'Favorite',
                 leading: Icon(
-                  Icons.edit,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  CupertinoIcons.heart,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
-                  size: 16,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  size: Dimensions.width16,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
               ),
-              ListTile(
+              CustomTile(
+                isDark: isDark,
+                title: 'Downloads',
                 leading: Icon(
-                  Icons.edit,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  Icons.download,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
-                  size: 16,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  size: Dimensions.width16,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
               ),
-              ListTile(
+              CustomTile(
                 leading: Icon(
-                  Icons.edit,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  Icons.language,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                title: TextCustom(text: 'Edit Profile'),
+                isDark: isDark,
+                title: 'Language',
                 trailing: Icon(
                   Icons.arrow_forward_ios,
-                  size: 16,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  size: Dimensions.width16,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
               ),
-              ListTile(
+              CustomTile(
                 leading: Icon(
-                  Icons.edit,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  themeNotifier.isDark
+                      ? Icons.nightlight_round
+                      : Icons.wb_sunny,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                title: TextCustom(text: 'Edit Profile'),
+                title: 'Dark Mode',
+                isDark: isDark,
                 trailing: Icon(
                   Icons.arrow_forward_ios,
-                  size: 16,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  size: Dimensions.width16,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
               ),
-              ListTile(
+              CustomTile(
                 leading: Icon(
-                  Icons.edit,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  Icons.wifi,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                title: TextCustom(text: 'Edit Profile'),
+                title: 'Only Download via WiFi',
+                isDark: isDark,
                 trailing: Icon(
                   Icons.arrow_forward_ios,
-                  size: 16,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  size: Dimensions.width16,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
               ),
-              ListTile(
+              CustomTile(
+                title: 'Play in Ground',
+                isDark: isDark,
                 leading: Icon(
-                  Icons.edit,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  CupertinoIcons.play_rectangle,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
-                title: TextCustom(text: 'Edit Profile'),
                 trailing: Icon(
                   Icons.arrow_forward_ios,
-                  size: 16,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
-                ),
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.edit,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
-                ),
-                title: TextCustom(text: 'Edit Profile'),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: 16,
-                  color: isDark ? Colors.white : Colors.grey.shade900,
+                  size: Dimensions.width16,
+                  color: isDark
+                      ? AppTheme.darkTheme.listTileTheme.iconColor
+                      : AppTheme.lightTheme.listTileTheme.iconColor,
                 ),
               ),
             ],
@@ -148,5 +205,30 @@ class _AccountScreenState extends State<AccountScreen> {
         ),
       );
     });
+  }
+}
+
+class CustomTile extends StatelessWidget {
+  final Widget trailing;
+  final String title;
+  final bool isDark;
+
+  final Widget leading;
+  const CustomTile({
+    Key? key,
+    required this.trailing,
+    required this.title,
+    required this.isDark,
+    required this.leading,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+        leading: leading,
+        title: TextCustom(
+          text: title,
+        ),
+        trailing: trailing);
   }
 }

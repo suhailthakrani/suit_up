@@ -72,7 +72,6 @@ class ProductCard extends StatelessWidget {
                           ),
                           TextCustom(
                             text: 'Rs. ${product.price}',
-                            color: Colors.grey.shade900,
                             fontWeight: FontWeight.w500,
                             fontSize: Dimensions.font13,
                           ),

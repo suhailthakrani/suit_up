@@ -42,7 +42,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     setState(() {
       productModel = ProductModel.fromJson(data);
       products = data['products'];
-      print(data['products']);
     });
   }
 
