@@ -1,13 +1,15 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class ProductModel {
   List<Product> products = [];
+  List<Product> kidsProducts = [];
+  List<Product> menProducts = [];
 
   ProductModel({required this.products});
 
   ProductModel.fromJson(Map<String, dynamic> json) {
-    if (json['products'] != null) {
+    if (json['ladies_products'] != null) {
       products = <Product>[];
-      json['products'].forEach((v) {
+      json['ladies_products'].forEach((v) {
         // ignore: unnecessary_new
         products.add(new Product.fromJson(v));
       });
@@ -17,7 +19,7 @@ class ProductModel {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (products.isNotEmpty) {
-      data['products'] = products.map((v) => v.toJson()).toList();
+      data['ladies_products'] = products.map((v) => v.toJson()).toList();
     }
     return data;
   }

@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     final data = jsonDecode(response);
     setState(() {
       productModel = ProductModel.fromJson(data);
-      products = data['products'];
+      products = data['ladies_products'];
     });
   }
 
