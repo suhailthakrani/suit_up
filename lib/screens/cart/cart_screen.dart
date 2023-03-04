@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:suit_up/models/cart_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/utils/dimensions.dart';
 
@@ -12,6 +16,8 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
