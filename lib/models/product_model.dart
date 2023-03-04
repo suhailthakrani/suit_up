@@ -10,11 +10,11 @@ class ProductModel {
 
   ProductModel.fromJson(Map<String, dynamic> json) {
     products =
-        json['products'] != null ? Products.fromJson(json['products']) : null;
+        json['products'] != null ? Products.fromMap(json['products']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (products != null) {
       data['products'] = products!.toJson();
     }
@@ -23,7 +23,7 @@ class ProductModel {
 }
 
 class Products {
-  List<ProductCategory> productCategories;
+  List<ProductCategory> productCategories = [];
 
   Products({
     required this.productCategories,
@@ -54,9 +54,12 @@ class Products {
 
   factory Products.fromMap(Map<String, dynamic> map) {
     List<ProductCategory> productCategories = [];
-    return Products(
-      productCategories: productCategories
+    map.forEach(
+      (key, value) {
+        productCategories.add(ProductCategory.fromMap(key, value));
+      },
     );
+    return Products(productCategories: productCategories);
   }
 
   String toJson() => json.encode(toMap());
@@ -105,16 +108,12 @@ class ProductCategory {
 
   factory ProductCategory.fromMap(String name, List<dynamic> list) {
     return ProductCategory(
-      categoryName: name,
-      categoryProducts: List<Product>.from(list.map((e) => Product.fromJson(e))).toList()
-    
-    );
+        categoryName: name,
+        categoryProducts:
+            List<Product>.from(list.map((e) => Product.fromJson(e))).toList());
   }
 
   String toJson() => json.encode(toMap());
-
-  // factory ProductCategory.fromJson(String source) =>
-  //     ProductCategory.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() =>
@@ -158,7 +157,7 @@ class Product {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['name'] = name;
     data['imageUrl'] = imageUrl;
     data['price'] = price;
