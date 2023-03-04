@@ -116,7 +116,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   child: Text("Men"),
                 ),
                 Tab(
-                  child: Text("Kids"),
+                  child: Text("Girls"),
+                ),
+                 Tab(
+                  child: Text("Boys"),
                 ),
               ],
             ),
@@ -130,6 +133,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               .getProductCategoryByName('women') ??
                           ProductCategory(
                               categoryName: '', categoryProducts: [])),
+                   ProductsScreen(
+                      productCategory: productModel.products!
+                              .getProductCategoryByName('men') ??
+                          ProductCategory(
+                              categoryName: '', categoryProducts: [])),
                   ProductsScreen(
                       productCategory: productModel.products!
                               .getProductCategoryByName('girls') ??
@@ -140,6 +148,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               .getProductCategoryByName('boys') ??
                           ProductCategory(
                               categoryName: '', categoryProducts: [])),
+
                 ],
               ),
             )

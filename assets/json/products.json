@@ -96,7 +96,7 @@
             "men": [
                 {
                     "name": "New Dress",
-                    "imageUrl": "assets/images/c1.jpg",
+                    "imageUrl": "assets/images/m1.jpg",
                     "price": 2999,
                     "discount": 15,
                     "category": "",
@@ -105,7 +105,7 @@
                 },
                 {
                     "name": "Fancy Dress",
-                    "imageUrl": "assets/images/c2.jpg",
+                    "imageUrl": "assets/images/m2.jpg",
                     "price": 4599,
                     "discount": 15,
                     "category": "",
@@ -114,7 +114,7 @@
                 },
                 {
                     "name": "Dress",
-                    "imageUrl": "assets/images/c3.jpg",
+                    "imageUrl": "assets/images/m3.jpg",
                     "price": 5999,
                     "discount": 15,
                     "category": "",
@@ -123,7 +123,7 @@
                 },
                 {
                     "name": "Dress",
-                    "imageUrl": "assets/images/c4.jpg",
+                    "imageUrl": "assets/images/m4.jpg",
                     "price": 4999,
                     "discount": 15,
                     "category": "",
@@ -132,7 +132,7 @@
                 },
                 {
                     "name": "Dress",
-                    "imageUrl": "assets/images/c5.jpg",
+                    "imageUrl": "assets/images/m5.jpg",
                     "price": 3999,
                     "discount": 15,
                     "category": "",
@@ -141,7 +141,7 @@
                 },
                 {
                     "name": "Dress",
-                    "imageUrl": "assets/images/c10.jpg",
+                    "imageUrl": "assets/images/m10.jpg",
                     "price": 2499,
                     "discount": 15,
                     "category": "",
@@ -150,7 +150,7 @@
                 },
                 {
                     "name": "Dress",
-                    "imageUrl": "assets/images/c6.jpg",
+                    "imageUrl": "assets/images/m6.jpg",
                     "price": 2999,
                     "discount": 15,
                     "category": "",
@@ -159,7 +159,7 @@
                    },
                 {
                     "name": "Salwar Qameez",
-                    "imageUrl": "assets/images/c7.jpg",
+                    "imageUrl": "assets/images/m7.jpg",
                     "price": 4599,
                     "discount": 15,
                     "category": "",
@@ -168,7 +168,7 @@
                 },
                 {
                     "name": "Dress",
-                    "imageUrl": "assets/images/c8.jpg",
+                    "imageUrl": "assets/images/m8.jpg",
                     "price": 5999,
                     "discount": 15,
                     "category": "",
@@ -177,7 +177,7 @@
                 },
                 {
                     "name": "Dress",
-                    "imageUrl": "assets/images/c9.jpg",
+                    "imageUrl": "assets/images/m2.jpg",
                     "price": 4999,
                     "discount": 15,
                     "category": "",
