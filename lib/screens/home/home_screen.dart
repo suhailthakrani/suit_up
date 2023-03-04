@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   ///
   @override
   void initState() {
-    _tabBarController = TabController(length: 3, vsync: this);
+    _tabBarController = TabController(length: 4, vsync: this);
     init();
     super.initState();
   }
@@ -95,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
       body: DefaultTabController(
         initialIndex: 0,
-        length: 3,
+        length: 4,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Tab(
                   child: Text("Girls"),
                 ),
-                 Tab(
+                Tab(
                   child: Text("Boys"),
                 ),
               ],
@@ -133,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               .getProductCategoryByName('women') ??
                           ProductCategory(
                               categoryName: '', categoryProducts: [])),
-                   ProductsScreen(
+                  ProductsScreen(
                       productCategory: productModel.products!
                               .getProductCategoryByName('men') ??
                           ProductCategory(
@@ -148,7 +148,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               .getProductCategoryByName('boys') ??
                           ProductCategory(
                               categoryName: '', categoryProducts: [])),
-
                 ],
               ),
             )

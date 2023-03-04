@@ -37,11 +37,10 @@ class _AccountScreenState extends State<AccountScreen> {
                     CircleAvatar(
                       radius: Dimensions.height60,
                       backgroundColor: Colors.grey.shade300,
-                      child: const Padding(
-                        padding: EdgeInsets.all(4.0),
+                      child: const ClipOval(
                         child: Image(
                           image: AssetImage(
-                            'assets/images/apple.png',
+                            'assets/images/suhail.jpg',
                           ),
                         ),
                       ),
