@@ -9,7 +9,7 @@ import 'package:suit_up/controllers/asset_manager.dart';
 import 'package:suit_up/models/product_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/screens/home/components/main_carousel_slider.dart';
-import 'package:suit_up/screens/home/components/products_widget.dart';
+import 'package:suit_up/screens/home/components/products_screen.dart';
 import 'package:suit_up/utils/dimensions.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,8 +21,9 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final _searchController = TextEditingController();
-  List products = [];
-  ProductModel productModel = ProductModel(products: []);
+
+  ProductModel productModel =
+      ProductModel(products: Products(productCategories: []));
 
   late TabController _tabBarController;
   int selected = 0;
@@ -31,18 +32,21 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     _tabBarController = TabController(length: 3, vsync: this);
-    loadProductsData();
+    init();
     super.initState();
   }
 
-  Future<void> loadProductsData() async {
+  init() async {
+    productModel = await loadProductsData();
+    setState(() {});
+  }
+
+  Future<ProductModel> loadProductsData() async {
     final String response =
-        await rootBundle.loadString('assets/json/ladies_products.json');
+        await rootBundle.loadString('assets/json/products.json');
     final data = jsonDecode(response);
-    setState(() {
-      productModel = ProductModel.fromJson(data);
-      products = data['ladies_products'];
-    });
+
+    return ProductModel.fromJson(data);
   }
 
   @override
@@ -102,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               controller: _tabBarController,
               // indicator: BoxDecoration(
               //   borderRadius: BorderRadius.circular(12),
-              //   color: Colors.purple.shade600,
+              //   color: Colors.purple.shade600,/
               // ),
               tabs: const [
                 Tab(
@@ -121,9 +125,21 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               child: TabBarView(
                 controller: _tabBarController,
                 children: [
-                  ProductWidget(productModel: productModel),
-                  ProductWidget(productModel: productModel),
-                  ProductWidget(productModel: productModel),
+                  ProductsScreen(
+                      productCategory: productModel.products!
+                              .getProductCategoryByName('women') ??
+                          ProductCategory(
+                              categoryName: '', categoryProducts: [])),
+                  ProductsScreen(
+                      productCategory: productModel.products!
+                              .getProductCategoryByName('girls') ??
+                          ProductCategory(
+                              categoryName: '', categoryProducts: [])),
+                  ProductsScreen(
+                      productCategory: productModel.products!
+                              .getProductCategoryByName('boys') ??
+                          ProductCategory(
+                              categoryName: '', categoryProducts: [])),
                 ],
               ),
             )

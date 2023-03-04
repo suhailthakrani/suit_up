@@ -6,23 +6,22 @@ import 'package:suit_up/models/product_model.dart';
 import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/product_card.dart';
 
-class ProductWidget extends StatelessWidget {
-  const ProductWidget({
-    super.key,
-    required this.productModel,
-  });
+class ProductsScreen extends StatelessWidget {
+  const ProductsScreen({
+    Key? key,
+    required this.productCategory,
+  }) : super(key: key);
 
-  final ProductModel productModel;
+  final ProductCategory productCategory;
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       shrinkWrap: true,
       physics: const BouncingScrollPhysics(),
-      itemCount:
-          productModel.products.isNotEmpty ? productModel.products.length : 0,
+      itemCount: productCategory.categoryProducts.isNotEmpty ? productCategory.categoryProducts.length : 0,
       itemBuilder: (context, index) {
-        return ProductCard(product: productModel.products[index]);
+        return ProductCard(product: (productCategory.categoryProducts[index]));
       },
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount:

@@ -8,24 +8,26 @@ import 'package:suit_up/screens/authentication/sign_up_screen.dart';
 import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 
-class ProductScreen extends StatefulWidget {
+class ProductDetailsScreen extends StatefulWidget {
   final Product product;
-  const ProductScreen({
+  const ProductDetailsScreen({
     Key? key,
     required this.product,
   }) : super(key: key);
 
   @override
-  State<ProductScreen> createState() => _ProductScreenState();
+  State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
 }
 
-class _ProductScreenState extends State<ProductScreen> {
+class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+
     double priceAfterDiscount = widget.product.price! -
-        (widget.product.price! * widget.product.discount! / 100);
+        ((widget.product.discount! / 100) * (widget.product.price!));
+
     return Scaffold(
       body: Stack(
         children: [
@@ -53,9 +55,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   child: const Icon(Icons.arrow_back_ios),
                 ),
                 ElevatedButton(
-                  onPressed: () {
-                    log(Get.height.toString());
-                  },
+                  onPressed: () {},
                   child: const Icon(CupertinoIcons.heart),
                 ),
               ],

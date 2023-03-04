@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:suit_up/models/product_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
-import 'package:suit_up/screens/home/components/product_screen.dart';
+import 'package:suit_up/screens/home/components/product_details_screen.dart';
 import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 
@@ -28,7 +28,7 @@ class ProductCard extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ProductScreen(product: product),
+                      builder: (context) => ProductDetailsScreen(product: product),
                     ),
                   );
                 },
