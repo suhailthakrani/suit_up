@@ -1,383 +1,463 @@
 {
-    "products": 
-        {
-            "women": [
-                {
-                    "name": "New Dress",
-                    "imageUrl": "assets/images/c1.jpg",
-                    "price": 2999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/c2.jpg",
-                    "price": 4599,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/c3.jpg",
-                    "price": 5999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/c4.jpg",
-                    "price": 4999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/c5.jpg",
-                    "price": 3999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/c10.jpg",
-                    "price": 2499,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/c6.jpg",
-                    "price": 2999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                   },
-                {
-                    "name": "Salwar Qameez",
-                    "imageUrl": "assets/images/c7.jpg",
-                    "price": 4599,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/c8.jpg",
-                    "price": 5999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/c9.jpg",
-                    "price": 4999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                }
-            ],
-            "men": [
-                {
-                    "name": "New Dress",
-                    "imageUrl": "assets/images/m1.jpg",
-                    "price": 2999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/m2.jpg",
-                    "price": 4599,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/m3.jpg",
-                    "price": 5999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/m4.jpg",
-                    "price": 4999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/m5.jpg",
-                    "price": 3999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/m10.jpg",
-                    "price": 2499,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/m6.jpg",
-                    "price": 2999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                   },
-                {
-                    "name": "Salwar Qameez",
-                    "imageUrl": "assets/images/m7.jpg",
-                    "price": 4599,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/m8.jpg",
-                    "price": 5999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/m2.jpg",
-                    "price": 4999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                }            ],
-            "girls": [
-                {
-                    "name": "New Dress",
-                    "imageUrl": "assets/images/FancyDress1.jpg",
-                    "price": 2999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/FancyDress2.jpg",
-                    "price": 4599,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/FancyDress3.jpg",
-                    "price": 5999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/FancyDress4.jpg",
-                    "price": 4999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/FancyDress5.jpg",
-                    "price": 3999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-               
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/FancyDress6.jpg",
-                    "price": 2999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                   },
-                {
-                    "name": "Salwar Qameez",
-                    "imageUrl": "assets/images/FancyDress7.jpg",
-                    "price": 4599,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/FancyDress8.jpg",
-                    "price": 5999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/FancyDress9.jpg",
-                    "price": 4999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                }, {
-                    "name": "Dress",
-                    "imageUrl": "assets/images/FancyDress10.jpg",
-                    "price": 2499,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                }
-           ],
-            "boys": [
-                {
-                    "name": "New Dress",
-                    "imageUrl": "assets/images/b1.jpg",
-                    "price": 1999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b2.jpg",
-                    "price": 3599,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b3.jpg",
-                    "price": 1999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b4.jpg",
-                    "price": 1499,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b5.jpg",
-                    "price": 1999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b10.jpg",
-                    "price": 1499,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b6.jpg",
-                    "price": 1999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                   },
-                {
-                    "name": "Salwar Qameez",
-                    "imageUrl": "assets/images/b7.jpg",
-                    "price": 2599,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b8.jpg",
-                    "price": 1999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b9.jpg",
-                    "price": 2999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                },
-                {
-                    "name": "Fancy Dress",
-                    "imageUrl": "assets/images/b10.jpg",
-                    "price": 2999,
-                    "discount": 15,
-                    "category": "",
-                     "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                
-                }
-
-            ]
-        }
-    
+    "products": {
+        "women": [
+            {
+                "name": "New Dress",
+                "imageUrl": "assets/images/c1.jpg",
+                "price": 2999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/c2.jpg",
+                "price": 4599.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/c3.jpg",
+                "price": 5999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/c4.jpg",
+                "price": 4999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/c5.jpg",
+                "price": 3999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/c10.jpg",
+                "price": 2499.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/c6.jpg",
+                "price": 2999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Salwar Qameez",
+                "imageUrl": "assets/images/c7.jpg",
+                "price": 4599.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/c8.jpg",
+                "price": 5999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/c9.jpg",
+                "price": 4999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            }
+        ],
+        "men": [
+            {
+                "name": "New Dress",
+                "imageUrl": "assets/images/m1.jpg",
+                "price": 2999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/m2.jpg",
+                "price": 4599.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/m3.jpg",
+                "price": 5999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/m4.jpg",
+                "price": 4999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/m5.jpg",
+                "price": 3999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/m10.jpg",
+                "price": 2499.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/m6.jpg",
+                "price": 2999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Salwar Qameez",
+                "imageUrl": "assets/images/m7.jpg",
+                "price": 4599.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/m8.jpg",
+                "price": 5999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/m2.jpg",
+                "price": 4999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            }
+        ],
+        "girls": [
+            {
+                "name": "New Dress",
+                "imageUrl": "assets/images/FancyDress1.jpg",
+                "price": 2999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/FancyDress2.jpg",
+                "price": 4599.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/FancyDress3.jpg",
+                "price": 5999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/FancyDress4.jpg",
+                "price": 4999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/FancyDress5.jpg",
+                "price": 3999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/FancyDress6.jpg",
+                "price": 2999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Salwar Qameez",
+                "imageUrl": "assets/images/FancyDress7.jpg",
+                "price": 4599.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/FancyDress8.jpg",
+                "price": 5999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/FancyDress9.jpg",
+                "price": 4999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Dress",
+                "imageUrl": "assets/images/FancyDress10.jpg",
+                "price": 2499.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            }
+        ],
+        "boys": [
+            {
+                "name": "New Dress",
+                "imageUrl": "assets/images/b1.jpg",
+                "price": 1999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b2.jpg",
+                "price": 3599.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b3.jpg",
+                "price": 1999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b4.jpg",
+                "price": 1499.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b5.jpg",
+                "price": 1999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b10.jpg",
+                "price": 1499.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b6.jpg",
+                "price": 1999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Salwar Qameez",
+                "imageUrl": "assets/images/b7.jpg",
+                "price": 2599.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b8.jpg",
+                "price": 1999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b9.jpg",
+                "price": 2999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "name": "Fancy Dress",
+                "imageUrl": "assets/images/b10.jpg",
+                "price": 2999.0,
+                "discount": 15.0,
+                "quantity": 1,
+                "size": "S",
+                "color": "red",
+                "category": "",
+                "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            }
+        ]
+    }
 }

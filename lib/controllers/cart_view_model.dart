@@ -1,35 +1,35 @@
 import 'package:flutter/cupertino.dart';
 import 'package:suit_up/models/cart_model.dart';
 
-class CartViewModel extends ChangeNotifier{
+class CartViewModel with ChangeNotifier {
   List<CartProduct> _cartItems = [];
 
   ///Getting cart items
   List<CartProduct> get cartItems => _cartItems;
 
-
   set setCartITems(List<CartProduct> cartItems) => _cartItems = cartItems;
-
 
 //Adding element to the cart
   void addToCart(CartProduct cartProduct) {
     for (var cartItem in _cartItems) {
-      if (cartItem.id == cartProduct.id) {
-        cartItem.quantity = cartItem.quantity+1;
+      if (cartItem.name == cartProduct.name) {
+        cartItem.quantity = cartItem.quantity + 1;
       }
       _cartItems.add(cartProduct);
     }
+    print("added");
+    print(_cartItems);
     notifyListeners();
   }
 
   //Remove element from the cart
-  void removeFromCart(int id) {
+  void removeFromCart(String name) {
     for (var cartItem in _cartItems) {
-      if (cartItem.id == id && cartItem.quantity > 1) {
-        cartItem.quantity = cartItem.quantity-1;
+      if (cartItem.name == name && cartItem.quantity > 1) {
+        cartItem.quantity = cartItem.quantity - 1;
       }
-    
-      _cartItems.removeWhere((element) => element.id == id);
+
+      _cartItems.removeWhere((element) => element.name == name);
     }
     notifyListeners();
   }
@@ -37,7 +37,9 @@ class CartViewModel extends ChangeNotifier{
   //Removing all the element
   void removeCart() {
     _cartItems.clear();
+    notifyListeners();
   }
+
   //Getting total price
   double totalPrice() {
     double totalPrice = 0.0;
@@ -46,6 +48,4 @@ class CartViewModel extends ChangeNotifier{
     }
     return totalPrice;
   }
-
-  
 }

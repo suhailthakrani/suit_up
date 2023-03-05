@@ -19,7 +19,9 @@ class ProductsScreen extends StatelessWidget {
     return GridView.builder(
       shrinkWrap: true,
       physics: const BouncingScrollPhysics(),
-      itemCount: productCategory.categoryProducts.isNotEmpty ? productCategory.categoryProducts.length : 0,
+      itemCount: productCategory.categoryProducts.isNotEmpty
+          ? productCategory.categoryProducts.length
+          : 0,
       itemBuilder: (context, index) {
         return ProductCard(product: (productCategory.categoryProducts[index]));
       },

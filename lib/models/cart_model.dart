@@ -48,7 +48,7 @@ class CartModel {
   int get hashCode => cartItems.hashCode;
 }
 class CartProduct {
-  final int id;
+  // final int id;
   final String name;
   final String imageUrl;
   final double price;
@@ -57,7 +57,7 @@ class CartProduct {
   final String color;
   int quantity;
   CartProduct({
-    required this.id,
+    // required this.id,
     required this.name,
     required this.imageUrl,
     required this.price,
@@ -80,7 +80,7 @@ class CartProduct {
     int? quantity,
   }) {
     return CartProduct(
-      id: id ?? this.id,
+      // id: id ?? this.id,
       name: name ?? this.name,
       imageUrl: imageUrl ?? this.imageUrl,
       price: price ?? this.price,
@@ -93,7 +93,7 @@ class CartProduct {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'id': id,
+      // 'id': id,
       'name': name,
       'imageUrl': imageUrl,
       'price': price,
@@ -106,7 +106,7 @@ class CartProduct {
 
   factory CartProduct.fromMap(Map<String, dynamic> map) {
     return CartProduct(
-      id: map['id'] as int,
+      // id: map['id'] as int,
       name: map['name'] as String,
       imageUrl: map['imageUrl'] as String,
       price: map['price'] as double,
@@ -123,7 +123,7 @@ class CartProduct {
 
   @override
   String toString() {
-    return 'CartProduct(id: $id, name: $name, imageUrl: $imageUrl, price: $price, category: $category, size: $size, color: $color, quantity: $quantity)';
+    return 'CartProduct(name: $name, imageUrl: $imageUrl, price: $price, category: $category, size: $size, color: $color, quantity: $quantity)';
   }
 
   @override
@@ -131,7 +131,7 @@ class CartProduct {
     if (identical(this, other)) return true;
   
     return 
-      other.id == id &&
+      // other.id == id &&
       other.name == name &&
       other.imageUrl == imageUrl &&
       other.price == price &&
@@ -143,7 +143,8 @@ class CartProduct {
 
   @override
   int get hashCode {
-    return id.hashCode ^
+    return 
+    // id.hashCode ^
       name.hashCode ^
       imageUrl.hashCode ^
       price.hashCode ^
