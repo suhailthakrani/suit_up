@@ -23,8 +23,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (_) => ThemeManager()),
-          
-          ChangeNotifierProvider(create: (_) => CartViewModel())
+          ChangeNotifierProvider(create: (_) => DatabaseProvider.db)
         ],
         child:
             Consumer<ThemeManager>(builder: ((context, themeNotifier, child) {

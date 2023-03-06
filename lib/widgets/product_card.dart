@@ -25,8 +25,8 @@ class ProductCard extends StatefulWidget {
 class _ProductCardState extends State<ProductCard> {
   @override
   Widget build(BuildContext context) {
-    final cartViewModel = Provider.of<CartViewModel>(context, listen: false);
-
+    
+   final cart = Provider.of<DatabaseProvider>(context, listen: false);
     return Container(
       // color: Colors.amber,
       alignment: Alignment.center,
@@ -105,7 +105,7 @@ class _ProductCardState extends State<ProductCard> {
                               color: widget.product.color!,
                               quantity: 1,
                             );
-                            final cart = Provider.of<DatabaseProvider>(context);
+                           
                             cart.addToCart(cartProduct);
                             ScaffoldMessenger.of(context)
                                 .showSnackBar(const SnackBar(content: Text("Done!")));

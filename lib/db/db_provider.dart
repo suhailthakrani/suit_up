@@ -21,20 +21,19 @@ class DatabaseProvider extends ChangeNotifier {
 
   initDatabase() async {
     return await openDatabase(
-      join(await getDatabasesPath(), 'suit_up.db'),
+      join(await getDatabasesPath(), 'suit_up_cart.db'),
       version: 1,
       onCreate: (db, version) {
         return db.execute("""
           CREATE TABLE cartItems(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT,
-            imageUrl TEXT,
-            price INTEGER,
+            name TEXT NOT NULL,
+            imageUrl TEXT NOT NULL,
+            price DOUBLE NOT NULL,
             category TEXT,
             size TEXT,
             color TEXT,
-            quantity INTEGER,
-          )
+            quantity INTEGER NOT NULL)
         """);
       },
     );
@@ -57,6 +56,8 @@ class DatabaseProvider extends ChangeNotifier {
     db!.delete('cartItems', where: 'id = ?', whereArgs: [id]);
     notifyListeners();
   }
+
+  
 
   //Getting cart items
  Future<List<CartProduct>> cartItems() async {
