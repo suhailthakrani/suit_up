@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:suit_up/controllers/cart_view_model.dart';
+import 'package:suit_up/db/db_provider.dart';
 import 'package:suit_up/screens/home/components/product_details_screen.dart';
 import 'package:suit_up/screens/home/home_screen.dart';
 import 'package:suit_up/screens/main_screen.dart';
@@ -15,20 +16,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-  final myTheme = ThemeData(
-    primarySwatch: Colors.purple,
-    brightness: Brightness.light,
-    fontFamily: 'Roboto',
-  );
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
         providers: [
-          ChangeNotifierProvider(
-            create: (_) => ThemeManager(),
-          ),
+          ChangeNotifierProvider(create: (_) => ThemeManager()),
+          
           ChangeNotifierProvider(create: (_) => CartViewModel())
         ],
         child:

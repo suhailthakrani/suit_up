@@ -11,14 +11,19 @@ class CartViewModel with ChangeNotifier {
 
 //Adding element to the cart
   void addToCart(CartProduct cartProduct) {
+    bool found = false;
     for (var cartItem in _cartItems) {
       if (cartItem.name == cartProduct.name) {
         cartItem.quantity = cartItem.quantity + 1;
+        found = true;
+        break;
+        
       }
-      _cartItems.add(cartProduct);
+      if (!found) {
+        _cartItems.add(cartProduct);
+        
+      }
     }
-    print("added");
-    print(_cartItems);
     notifyListeners();
   }
 
