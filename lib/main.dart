@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:suit_up/controllers/cart_view_model.dart';
-import 'package:suit_up/db/db_provider.dart';
+import 'package:suit_up/db/cart_provider.dart';
 import 'package:suit_up/screens/home/components/product_details_screen.dart';
 import 'package:suit_up/screens/home/home_screen.dart';
 import 'package:suit_up/screens/main_screen.dart';
@@ -11,7 +10,7 @@ import 'package:suit_up/theme/theme_manager.dart';
 
 void main() {
   runApp(
-    MyApp(),
+    const MyApp(),
   );
 }
 
@@ -23,7 +22,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (_) => ThemeManager()),
-          ChangeNotifierProvider(create: (_) => DatabaseProvider.db)
+          ChangeNotifierProvider(create: (_)=> CartProvider())
+          
         ],
         child:
             Consumer<ThemeManager>(builder: ((context, themeNotifier, child) {
@@ -36,3 +36,8 @@ class MyApp extends StatelessWidget {
         })));
   }
 }
+
+
+
+
+

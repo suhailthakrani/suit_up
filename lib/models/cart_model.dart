@@ -48,16 +48,16 @@ class CartModel {
   int get hashCode => cartItems.hashCode;
 }
 class CartProduct {
-  // final int id;
+  final int? id;
   final String name;
   final String imageUrl;
   final double price;
   final String category;
   final String size;
   final String color;
-  int quantity;
+  ValueNotifier<int>? quantity;
   CartProduct({
-    // required this.id,
+    this.id,
     required this.name,
     required this.imageUrl,
     required this.price,
@@ -77,10 +77,10 @@ class CartProduct {
     String? category,
     String? size,
     String? color,
-    int? quantity,
+    ValueNotifier<int>? quantity,
   }) {
     return CartProduct(
-      // id: id ?? this.id,
+      id: id ?? this.id,
       name: name ?? this.name,
       imageUrl: imageUrl ?? this.imageUrl,
       price: price ?? this.price,
@@ -93,27 +93,27 @@ class CartProduct {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      // 'id': id,
+      'id': id,
       'name': name,
       'imageUrl': imageUrl,
       'price': price,
       'category': category,
       'size': size,
       'color': color,
-      'quantity': quantity,
+      'quantity': quantity?.value,
     };
   }
 
   factory CartProduct.fromMap(Map<String, dynamic> map) {
     return CartProduct(
-      // id: map['id'] as int,
+      id: map['id'] != null ? map['id'] as int : null,
       name: map['name'] as String,
       imageUrl: map['imageUrl'] as String,
       price: map['price'] as double,
       category: map['category'] as String,
       size: map['size'] as String,
       color: map['color'] as String,
-      quantity: map['quantity'] as int,
+      quantity: map['quantity'] != null ? ValueNotifier(map['quantity']) : null,
     );
   }
 
@@ -123,7 +123,7 @@ class CartProduct {
 
   @override
   String toString() {
-    return 'CartProduct(name: $name, imageUrl: $imageUrl, price: $price, category: $category, size: $size, color: $color, quantity: $quantity)';
+    return 'CartProduct(id: $id, name: $name, imageUrl: $imageUrl, price: $price, category: $category, size: $size, color: $color, quantity: $quantity)';
   }
 
   @override
@@ -131,7 +131,7 @@ class CartProduct {
     if (identical(this, other)) return true;
   
     return 
-      // other.id == id &&
+      other.id == id &&
       other.name == name &&
       other.imageUrl == imageUrl &&
       other.price == price &&
@@ -143,8 +143,7 @@ class CartProduct {
 
   @override
   int get hashCode {
-    return 
-    // id.hashCode ^
+    return id.hashCode ^
       name.hashCode ^
       imageUrl.hashCode ^
       price.hashCode ^

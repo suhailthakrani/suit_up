@@ -2,9 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:provider/provider.dart';
 import 'package:suit_up/screens/account/account_screen.dart';
 import 'package:suit_up/screens/cart/cart_screen.dart';
 import 'package:suit_up/screens/home/home_screen.dart';
+
+import '../db/cart_provider.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -33,8 +36,8 @@ class _MainScreenState extends State<MainScreen> {
               selectedIndex = value;
             });
           },
-          items: const [
-            BottomNavigationBarItem(
+          items:  [
+            const BottomNavigationBarItem(
               label: 'Home',
               icon: Icon(
                 Icons.home,
@@ -42,9 +45,23 @@ class _MainScreenState extends State<MainScreen> {
             ),
             BottomNavigationBarItem(
               label: 'Cart',
-              icon: Icon(
+              icon: Badge(
+                     label: Consumer<CartProvider>(
+       builder: (context, value, child) {
+         return Text(
+           value.getCounter().toString(),
+           style: const TextStyle(
+               color: Colors.white, fontWeight: FontWeight.bold),
+         );
+       },
+     ),
+     alignment:  AlignmentDirectional.topEnd,
+
+                child: Icon(
                 CupertinoIcons.shopping_cart,
               ),
+              )
+              
             ),
             BottomNavigationBarItem(
               label: 'Account',

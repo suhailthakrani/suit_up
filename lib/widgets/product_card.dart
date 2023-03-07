@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:suit_up/controllers/cart_view_model.dart';
-import 'package:suit_up/db/db_provider.dart';
+import 'package:suit_up/db/db_helper.dart';
+import 'package:suit_up/db/cart_provider.dart';
 import 'package:suit_up/models/cart_model.dart';
 import 'package:suit_up/models/product_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
@@ -23,10 +23,20 @@ class ProductCard extends StatefulWidget {
 }
 
 class _ProductCardState extends State<ProductCard> {
+  DatabaseHelper dbHelper = DatabaseHelper.db;
   @override
   Widget build(BuildContext context) {
-    
-   final cart = Provider.of<DatabaseProvider>(context, listen: false);
+    final cart = Provider.of<CartProvider>(context);
+    void saveData(CartProduct cartProduct) {
+      dbHelper.insert(cartProduct).then((value) {
+        cart.addTotalPrice(cartProduct.price.toDouble());
+        cart.addCounter();
+        print('Product Added to cart');
+      }).onError((error, stackTrace) {
+        print(error.toString());
+      });
+    }
+
     return Container(
       // color: Colors.amber,
       alignment: Alignment.center,
@@ -96,19 +106,18 @@ class _ProductCardState extends State<ProductCard> {
                       child: IconButton(
                           onPressed: () {
                             // Adding items to the cart
-                            CartProduct cartProduct = CartProduct(
-                              name: widget.product.name!,
-                              imageUrl: widget.product.imageUrl!,
-                              price: widget.product.price!,
-                              category: widget.product.category!,
-                              size: widget.product.size!,
-                              color: widget.product.color!,
-                              quantity: 1,
+
+                            saveData(
+                              CartProduct(
+                                name: widget.product.name!,
+                                imageUrl: widget.product.imageUrl!,
+                                price: widget.product.price!,
+                                category: widget.product.category!,
+                                size: widget.product.size!,
+                                color: widget.product.color!,
+                                quantity: ValueNotifier(1),
+                              ),
                             );
-                           
-                            cart.addToCart(cartProduct);
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(const SnackBar(content: Text("Done!")));
                           },
                           style: IconButton.styleFrom(
                             padding: EdgeInsets.zero,
