@@ -5,8 +5,11 @@ import 'package:get/get.dart';
 
 import 'package:suit_up/models/product_model.dart';
 import 'package:suit_up/screens/authentication/sign_up_screen.dart';
+import 'package:suit_up/theme/theme_manager.dart';
 import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/custom_text.dart';
+
+import '../../../theme/theme_constants.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   final Product product;
@@ -212,11 +215,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   ),
                   HeightCustom(Dimensions.height8),
                   Expanded(
-                    child: TextCustom(
-                        textAlign: TextAlign.justify,
-                        text:
-                            '''Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'''),
-                  )
+                      child: TextCustom(
+                    textAlign: TextAlign.justify,
+                    text: widget.product.description ?? '',
+                    color: ThemeManager().isDark
+                        ? AppTheme.darkTheme.primaryColor
+                        : AppTheme.lightTheme.primaryColor,
+                  ))
                 ],
               ),
             ),

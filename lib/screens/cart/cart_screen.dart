@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 import 'package:suit_up/db/db_helper.dart';
 import 'package:suit_up/db/cart_provider.dart';
 import 'package:suit_up/models/cart_model.dart';
+import 'package:suit_up/theme/theme_constants.dart';
+import 'package:suit_up/theme/theme_manager.dart';
 import 'package:suit_up/utils/dimensions.dart';
 import 'package:suit_up/widgets/custom_text.dart';
 
@@ -35,7 +37,13 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Your Cart Screen"),
+        title: TextCustom(
+          text: "Your Cart Screen",
+          color: Colors.white,
+          fontWeight: FontWeight.w600,
+          wordSpacing: 0.3,
+          letterSpacing: 0.3,
+        ),
       ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
@@ -60,7 +68,7 @@ class _CartScreenState extends State<CartScreen> {
                           itemCount: provider.cart.length,
                           itemBuilder: (context, index) {
                             return Container(
-                                color: Colors.grey.shade100,
+                                // color: Colors.grey.shade100,
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(children: [
                                   SizedBox(
@@ -91,7 +99,11 @@ class _CartScreenState extends State<CartScreen> {
                                         Text(
                                           provider.cart[index].name,
                                           style: TextStyle(
-                                            color: Colors.black54,
+                                            color: ThemeManager().isDark
+                                                ? AppTheme
+                                                    .darkTheme.primaryColor
+                                                : AppTheme
+                                                    .lightTheme.primaryColor,
                                             fontSize: Dimensions.font16,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -99,14 +111,12 @@ class _CartScreenState extends State<CartScreen> {
                                         SizedBox(height: Dimensions.height5),
                                         Row(
                                           children: [
-                                            TextCustom(
-                                              text:
-                                                  "Color: ${provider.cart[index].color.capitalize}",
+                                            Text(
+                                              "Color: ${provider.cart[index].color.capitalize}",
                                             ),
                                             SizedBox(width: Dimensions.width16),
-                                            TextCustom(
-                                              text:
-                                                  "Size: ${provider.cart[index].size}",
+                                            Text(
+                                              "Size: ${provider.cart[index].size}",
                                             ),
                                           ],
                                         ),

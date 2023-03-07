@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
+ 
+
   static final ThemeData lightTheme = ThemeData(
       brightness: Brightness.light,
       useMaterial3: true,
       primaryColor: Colors.purple,
-      iconTheme: IconThemeData(color: Colors.purple),
-      listTileTheme: ListTileThemeData(iconColor: Colors.purple),
+      iconTheme: const IconThemeData(color: Colors.purple),
+      listTileTheme: const ListTileThemeData(iconColor: Colors.purple),
       fontFamily: 'Roboto',
       textTheme: TextTheme(
           displayLarge: TextStyle(
