@@ -55,7 +55,6 @@ class _ProductCardState extends State<ProductCard> {
                   );
                 },
                 child: Card(
-                  color: Colors.amber,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(Dimensions.radius12),
                     child: Image.asset(
@@ -151,7 +150,7 @@ class _ProductCardState extends State<ProductCard> {
                 text: "${widget.product.discount} % OFF",
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
-                fontSize: Dimensions.font12,
+                fontSize: Dimensions.font11,
               ),
             ),
           ),

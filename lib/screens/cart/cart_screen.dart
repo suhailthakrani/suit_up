@@ -194,7 +194,7 @@ class _CartScreenState extends State<CartScreen> {
                 Consumer<CartProvider>(
                   builder: (context, value, child) {
                     final ValueNotifier<double?> totalPrice =
-                        ValueNotifier(null);
+                        ValueNotifier(0.0);
                     for (var cartItem in value.cart) {
                       totalPrice.value = (totalPrice.value ?? 0.0) +
                           (cartItem.price * cartItem.quantity!.value);
@@ -216,7 +216,7 @@ class _CartScreenState extends State<CartScreen> {
                                     fontWeight: FontWeight.w600,
                                   ),
                                   TextCustom(
-                                    text: value.toString(),
+                                    text: "Rs. ${value}",
                                     fontSize: Dimensions.font16,
                                     fontWeight: FontWeight.w600,
                                   ),
