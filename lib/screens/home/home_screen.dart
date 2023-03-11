@@ -56,12 +56,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
       appBar: AppBar(
         toolbarHeight: Dimensions.height60,
+        automaticallyImplyLeading: false,
+        // backgroundColor: ThemeManager().isDark ? Colors.black : Colors.white60,
         title: CupertinoTextField(
           placeholder: 'Type here',
-          prefix: Padding(
-            padding: EdgeInsets.only(left: Dimensions.width5),
+          suffix: Padding(
+            padding: EdgeInsets.only(
+              left: Dimensions.width5,
+              bottom: 2,
+              top: 3,
+              right: 5,
+            ),
             child: const Icon(
-              CupertinoIcons.search,
+              Icons.search,
               color: Colors.purple,
             ),
           ),
@@ -86,8 +93,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
               onPressed: () {},
               child: const Icon(
-                Icons.notifications_outlined,
+                Icons.notifications,
               ),
+              // child: Badge(
+              //   label: Consumer<CartProvider>(
+              //     builder: (context, value, child) {
+              //       return Text(
+              //         value.getCounter().toString(),
+              //         style: const TextStyle(
+              //             color: Colors.white, fontWeight: FontWeight.bold),
+              //       );
+              //     },
+              //   ),
+              //   child: const Icon(
+              //     CupertinoIcons.cart,
+              //   ),
+              // ),
             ),
           ),
           WidthCustom(Dimensions.width10),
@@ -99,7 +120,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            HeightCustom(5),
             const MainCarouselSlider(),
             TabBar(
               physics: const BouncingScrollPhysics(),
@@ -123,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ],
             ),
-            HeightCustom(Dimensions.height10),
+            HeightCustom(Dimensions.height5),
             Flexible(
               child: TabBarView(
                 controller: _tabBarController,

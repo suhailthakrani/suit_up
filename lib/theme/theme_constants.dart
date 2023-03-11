@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
- 
-
   static final ThemeData lightTheme = ThemeData(
       brightness: Brightness.light,
       useMaterial3: true,
@@ -15,9 +13,9 @@ class AppTheme {
         color: Colors.grey.shade900,
       )),
       appBarTheme: const AppBarTheme(
-        color: Colors.purple,
+        color: Colors.white60,
       ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData().copyWith(
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData().copyWith(
         selectedItemColor: Colors.purple,
         unselectedItemColor: Colors.grey,
       ));
@@ -25,16 +23,16 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData(
       brightness: Brightness.dark,
       primaryColor: Colors.purple,
-      listTileTheme: ListTileThemeData(iconColor: Colors.white),
+      listTileTheme: const ListTileThemeData(iconColor: Colors.white),
       useMaterial3: true,
-      iconTheme: IconThemeData(color: Colors.white),
+      iconTheme: const IconThemeData(color: Colors.white),
       fontFamily: 'Roboto',
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         displayLarge: TextStyle(
           color: Colors.white,
         ),
       ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData().copyWith(
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData().copyWith(
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
       ));

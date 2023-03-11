@@ -23,6 +23,13 @@ class _MainScreenState extends State<MainScreen> {
     const CartScreen(),
     const AccountScreen(),
   ];
+
+  @override
+  void initState() {
+    context.read<CartProvider>().getCounter();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
               selectedIndex = value;
             });
           },
-          items:  [
+          items: [
             const BottomNavigationBarItem(
               label: 'Home',
               icon: Icon(
@@ -44,25 +51,11 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
             BottomNavigationBarItem(
-              label: 'Cart',
-              icon: Badge(
-                     label: Consumer<CartProvider>(
-       builder: (context, value, child) {
-         return Text(
-           value.getCounter().toString(),
-           style: const TextStyle(
-               color: Colors.white, fontWeight: FontWeight.bold),
-         );
-       },
-     ),
-     alignment:  AlignmentDirectional.topEnd,
-
-                child: Icon(
-                CupertinoIcons.shopping_cart,
-              ),
-              )
-              
-            ),
+                label: 'Cart',
+                icon: Icon(
+                    CupertinoIcons.shopping_cart,
+                  ),
+                ),
             BottomNavigationBarItem(
               label: 'Account',
               icon: Icon(

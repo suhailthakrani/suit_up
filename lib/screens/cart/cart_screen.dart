@@ -28,7 +28,7 @@ class _CartScreenState extends State<CartScreen> {
   @override
   void initState() {
     databaseHelper = DatabaseHelper.db;
-    // cartProvider = Provider.of<CartProvider>(context, listen: false);
+    
     context.read<CartProvider>().getData();
     super.initState();
   }
@@ -55,6 +55,7 @@ class _CartScreenState extends State<CartScreen> {
                   child: Consumer<CartProvider>(
                     builder: (context, provider, child) {
                       if (provider.cart.isEmpty) {
+                        Future.delayed(Duration(seconds: 3));
                         return const Center(
                             child: Text(
                           'Your Cart is Empty',
