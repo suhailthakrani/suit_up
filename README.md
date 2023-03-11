@@ -1,16 +1,16 @@
 # suit_up
 
-A new Flutter project.
 
-## Getting Started
+## Home Screen
 
-This project is a starting point for a Flutter application.
+[![perl dark](https://github.com/suhailthakrani/suit_up/blob/master/e2181f41-ed2d-4d94-8ee4-29c87218608c.jpg)]
 
-A few resources to get you started if this is your first Flutter project:
+## Cart Screen
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[![perl dark](https://github.com/suhailthakrani/suit_up/blob/master/wb.jpg)]
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## My Account Screen
+
+[![perl dark](https://github.com/suhailthakrani/suit_up/blob/master/wc.jpg)]
+
+
